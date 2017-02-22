@@ -27,6 +27,9 @@ gem "font-awesome-rails"
 gem 'httparty'
 gem 'simple_form'
 gem "ckeditor"
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk', '~> 2'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
