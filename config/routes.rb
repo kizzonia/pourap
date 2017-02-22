@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :bloggers
   resources :projects
   resources :abouts
   root 'home#index'
