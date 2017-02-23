@@ -74,6 +74,9 @@ GEM
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     ckeditor (4.2.2)
       cocaine
@@ -155,6 +158,11 @@ GEM
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.0.1)
       actionpack (= 5.0.1)
       activesupport (= 5.0.1)
@@ -214,6 +222,7 @@ DEPENDENCIES
   autoprefixer-rails
   aws-sdk (~> 2)
   bootstrap (~> 4.0.0.alpha6)
+  bootstrap-sass
   byebug
   ckeditor
   coffee-rails (~> 4.2)
@@ -227,6 +236,7 @@ DEPENDENCIES
   pg
   puma (~> 3.0)
   rails (~> 5.0.1)
+  rails_12factor
   sass-rails (~> 5.0)
   simple_form
   sqlite3
