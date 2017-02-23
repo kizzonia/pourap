@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223105352) do
+ActiveRecord::Schema.define(version: 20170223193945) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "name"
@@ -48,6 +48,18 @@ ActiveRecord::Schema.define(version: 20170223105352) do
     t.index ["reset_password_token"], name: "index_bloggers_on_reset_password_token", unique: true
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "shortDescription"
+    t.text     "description"
+    t.text     "location"
+    t.string   "eventDate"
+    t.text     "sponsors"
+    t.text     "socialLink"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "homes", force: :cascade do |t|
     t.string   "picture_name"
     t.datetime "created_at",             null: false
@@ -70,6 +82,18 @@ ActiveRecord::Schema.define(version: 20170223105352) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "link"
+    t.string   "title"
+    t.datetime "published_at"
+    t.integer  "likes"
+    t.integer  "dislikes"
+    t.string   "uid"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["uid"], name: "index_videos_on_uid"
   end
 
 end

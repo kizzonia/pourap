@@ -31,10 +31,9 @@
 					<nav class="link-effect-7" id="link-effect-7">
 						<ul class="nav navbar-nav">
 							<li class="active act"><%= link_to "Home", root_path %></li>
-							<li><%= link_to "Abouts", abouts_path %></li>
-							<li><a href="features.html">Projects</a></li>
-							<li><a href="travel.html">Videos</a></li>
-							<li><%= link_to "Blogger Admin", bloggers_path %></li>
+							<li><%= link_to "Events", events_path %></li>
+							<li><%= link_to "Videos", videos_path</li>
+							<li><%= link_to "admin", bloggers_path %></li>
 							<li><a href="music.html">Music</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
@@ -45,12 +44,10 @@
 			</div>
 			<div class="nav navbar-nav navbar-right social-icons wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
 					<ul>
-						<li><a href="#"> </a></li>
-						<li><a href="#" class="pin"> </a></li>
-						<li><a href="#" class="in"> </a></li>
-						<li><a href="#" class="be"> </a></li>
-
-						<li><a href="#" class="vimeo"> </a></li>
+						<li><%= fa_icon "facebook-square", class: "pin" %>></li>
+						<li><%= fa_icon "instagram", class: "pin" %></li>
+						<li><%= fa_icon "twitter-square", class: "in" %></li>
+						<li><%= fa_icon "vimeo-square", class: "vimeo" %></li>
 					</ul>
 				</div>
 			<div class="clearfix"> </div>

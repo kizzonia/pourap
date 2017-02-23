@@ -221,7 +221,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   aws-sdk (~> 2)
-  bootstrap (~> 4.0.0.alpha6)
+  bootstrap (~> 4.0.0.alpha3)
   bootstrap-sass
   byebug
   ckeditor
