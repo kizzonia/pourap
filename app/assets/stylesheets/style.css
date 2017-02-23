@@ -283,7 +283,7 @@ label.on{
 }
 /*--banner--*/
 .banner{
-background: url('../assets/banner-1.jpg') no-repeat 0px 0px;
+background: image-url('banner-1.jpg') no-repeat 0px 0px;
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
@@ -293,7 +293,7 @@ min-height: 600px;
 }
 
 .banner-1{
-background: url("../assets/banner-1.jpg") no-repeat 0px 0px;
+background: image-url("banner-1.jpg") no-repeat 0px 0px;
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
