@@ -1,0 +1,36 @@
+<%= simple_form_for(@project, url: projects_path, html: { class: 'form-horizontal' }) do |f| %>
+<% if about.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(about.errors.count, "error") %> prohibited this about from being saved:</h2>
+
+    <ul>
+    <% about.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<div class="form-group">
+  <%= f.input :name, class: "form-control", placeholder: "Project Name" %>
+</div>
+
+<div class="form-group">
+  <%= f.input :owner, class: "form-control", placehlder: "Project Owner" %>
+</div>
+
+<div class="form-group">
+  <%= f.input :link, class: "form-control", placeholder: "Project Link" %>
+</div>
+
+<div class="form-group">
+  <%= f.input :description, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.submit :submit, class: "btn btn-success" %>
+</div>
+
+
+<% end %>

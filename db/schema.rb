@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222203301) do
+ActiveRecord::Schema.define(version: 20170223105352) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "name"
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(version: 20170222203301) do
     t.datetime "thumbnail_updated_at"
     t.index ["email"], name: "index_bloggers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_bloggers_on_reset_password_token", unique: true
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.string   "picture_name"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   create_table "projects", force: :cascade do |t|

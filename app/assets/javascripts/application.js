@@ -18,4 +18,6 @@
 //= require classie
 //= require jquery.chocolat
 //= require wow.min
+//= require bloggers
+
 //= require uisearch

@@ -1,4 +1,5 @@
 class AboutsController < ApplicationController
+  layout "bloggers", except:[:index, :show]
   before_action :set_about, only: [:show, :edit, :update, :destroy]
 
   # GET /abouts
@@ -69,6 +70,6 @@ class AboutsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def about_params
-      params.require(:about).permit(:name, :bio, :contact)
+      params.require(:about).permit(:name, :bio, :contact, :facebook, :twitter, :email, :thumbnail)
     end
 end
