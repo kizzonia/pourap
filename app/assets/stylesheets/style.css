@@ -283,7 +283,7 @@ label.on{
 }
 /*--banner--*/
 .banner{
-background: url("../assets/banner-1.jpg") no-repeat 0px 0px;
+background: url('../assets/banner-1.jpg') no-repeat 0px 0px;
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
