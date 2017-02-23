@@ -6,10 +6,11 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @projects = Project.all.order('created_at DESC').limit(4).offset(1)
   end
 
   def new
-    @projects = Project.new
+    @project = Project.new
   end
 
   def edit
@@ -23,6 +24,7 @@ class ProjectsController < ApplicationController
     else
       render 'new'
     end
+  end
 
     def update
       if @project.update(project_params)
@@ -30,12 +32,13 @@ class ProjectsController < ApplicationController
       else
         render "edit"
       end
+    end
 
       def destroy
         @project.destroy
         redirect_to @projects
       end
-  end
+
 
 private
 def set_project
