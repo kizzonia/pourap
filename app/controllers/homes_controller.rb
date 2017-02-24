@@ -1,7 +1,7 @@
-class HomeController < ApplicationController
+class HomesController < ApplicationController
   layout "bloggers", except:[:index, :show]
   before_action :set_about, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @homes = Home.all.order("created_at DESC")
   end
