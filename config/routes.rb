@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :projects
   resources :abouts
   resources :bloggers
-resources :videos, only: [:index, :new, :create]
+resources :videos
 resources :homes
   root 'homes#index'
 
