@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <% @homes.each do |home| %>
       <div class="col-md-4">
-        <%= image_tag @about.thumbnail.url(:medium), class: "img-responsive img-circle" %>
+        <%= image_tag home.thumbnail.url(:medium), class: "img-responsive img-circle" %>
       </div>
 
       <div class="col-md-8">
