@@ -1,0 +1,9 @@
+<%= simple_form_for(@video, url: videos_path, html: { class: 'form-horizontal' }) do |f| %>
+<div class="form-group">
+<%= f.input :link, class: "form-control", required: true %>
+</div>
+
+<div class="form-group">
+  <%= f.submit :submit, class: "btn btn1" %>
+</div>
+<% end %>
