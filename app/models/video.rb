@@ -1,5 +1,7 @@
 class Video < ApplicationRecord
+  YT_LINK_FORMAT = /\A.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/i
 
+  validates :link, presence: true, format: YT_LINK_FORMAT
 
 before_create -> do
   uid = link.match(YT_LINK_FORMAT)
@@ -12,23 +14,25 @@ before_create -> do
     self.errors.add(:link, 'is not unique.')
     false
   else
-    get_additional_info
-  end
-  private
+    def get_additional_info
+      begin
+        client = YouTubeIt::OAuth2Client.new(dev_key: '571999469842-8djhdmjuis4kit4lre6upqsg346j2os3.apps.googleusercontent.com')
+        video = client.video_by(uid)
+        self.title = video.title
+        self.duration = parse_duration(video.duration)
+        self.author = video.author.name
+        self.likes = video.rating.likes
+        self.dislikes = video.rating.dislikes
+      rescue
+        self.title = '' ; self.duration = '00:00:00' ; self.author = '' ; self.likes = 0 ; self.dislikes = 0
+      end
+    end
 
-def get_additional_info
-  begin
-    client = YouTubeIt::OAuth2Client.new(dev_key: 'Your_YT_developer_key')
-    video = client.video_by(uid)
-    self.title = video.title
-    self.duration = parse_duration(video.duration)
-    self.author = video.author.name
-    self.likes = video.rating.likes
-    self.dislikes = video.rating.dislikes
-  rescue
-    self.title = '' ; self.duration = '00:00:00' ; self.author = '' ; self.likes = 0 ; self.dislikes = 0
   end
-end
+
+
+
+private
 
 def parse_duration(d)
   hr = (d / 3600).floor
@@ -42,7 +46,5 @@ def parse_duration(d)
   hr.to_s + ':' + min.to_s + ':' + sec.to_s
 end
 end
-  YT_LINK_FORMAT = /\A.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/i
 
- validates :link, presence: true, format: YT_LINK_FORMAT
 end
