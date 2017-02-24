@@ -14,8 +14,12 @@
 </div>
 
 <div class="form-group">
-  <%= f.input :description, class: "form-control" %>
+  <%= f.input :description, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+
 </div>
+<div class="form-group">
+    <%= f.input :thumbnail, as: :file, paceholder: "Add display picture" %>
+  </div>
 
 <div class="form-group">
   <%= f.submit :submit, class: "btn btn-success" %>

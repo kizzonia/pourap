@@ -20,3 +20,4 @@
 //= require wow.min
 //= require bloggers
 //= require uisearch
+//= require ckeditor/init

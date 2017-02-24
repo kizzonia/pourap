@@ -26,13 +26,13 @@ gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resour
 gem "font-awesome-rails"
 gem 'httparty'
 gem 'simple_form'
-gem "ckeditor"
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '~> 2'
 gem 'yt', '~> 0.28.0'
 gem 'autoprefixer-rails'
 gem 'rails_12factor'
-gem 'bootstrap-sass'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

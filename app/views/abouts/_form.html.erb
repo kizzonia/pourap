@@ -16,7 +16,8 @@
   </div>
 
   <div class="form-group">
-    <%= f.input :bio, class: "form-control" %>
+    <%= f.input :bio, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+
   </div>
 
   <div class="form-group">
@@ -33,6 +34,9 @@
   <div class="form-group">
     <%= f.input :email, class: "form-control", plaaceholder: "Enter Your Email Address"%>
   </div>
+  <div class="form-group">
+      <%= f.input :thumbnail, as: :file, paceholder: "Add display picture" %>
+    </div>
   <div class="form-group">
     <%= f.submit :submit, class: "btn btn-success"%>
   </div>

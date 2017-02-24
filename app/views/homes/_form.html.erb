@@ -1,0 +1,14 @@
+<%= simple_form_for(@home) do |f| %>
+  <div class="form-group">
+    <%= f.input :picture_name, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+  </div>
+
+  <div class="form-group">
+      <%= f.input :thumbnail, as: :file, paceholder: "Add display picture" %>
+    </div>
+
+    <div class="form-group">
+      <%=f.submit :submit, class: "btn btn-success" %>
+    </div>
+
+    <% end %>
