@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  def index
+    @homes = Home.all.order("created_at DESC")
+  end
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   protected
