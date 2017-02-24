@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require bootstrap
+//= require ckeditor/init
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -20,4 +21,3 @@
 //= require wow.min
 //= require bloggers
 //= require uisearch
-//= require ckeditor/init
