@@ -26,8 +26,10 @@ gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resour
 gem "font-awesome-rails"
 gem 'httparty'
 gem 'simple_form'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
-gem 'aws-sdk', '~> 2'
+gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
+
+gem 'aws-sdk', '< 2.0'
+gem 'aws-sdk-v1', '~> 1.66'
 gem 'yt', '~> 0.28.0'
 gem 'autoprefixer-rails'
 gem 'rails_12factor'
