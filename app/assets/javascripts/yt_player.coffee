@@ -2,7 +2,6 @@ jQuery ->
   # Initially the player is not loaded
   window.ytPlayerLoaded = false
 
-
   makeVideoPlayer = (video) ->
     if !window.ytPlayerLoaded
       player_wrapper = $('#player-wrapper')
@@ -26,23 +25,4 @@ jQuery ->
       window.ytplayer.loadVideoById(video)
       window.ytplayer.pauseVideo()
     return
-      _run = ->
-      # Runs as soon as Google API is loaded
-      $('.yt_preview').first().click()
-      return
-
-    google.setOnLoadCallback _run
-    $('.yt_preview').click -> makeVideoPlayer $(this).data('uid')
-
-    $(window).on 'resize', ->
-  player = $('#ytPlayer')
-  player.height(player.width() / 1.777777777) if player.size() > 0
-  return
-
-  $(window).bindWithDelay('resize', ->
-  player = $('#ytPlayer')
-  player.height(player.width() / 1.777777777) if player.size() > 0
-  return
-, 500)
-
   return
