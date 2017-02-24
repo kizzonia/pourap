@@ -32,7 +32,7 @@ before_create -> do
 
 
 
-private
+
 
 def parse_duration(d)
   hr = (d / 3600).floor
@@ -45,6 +45,6 @@ def parse_duration(d)
 
   hr.to_s + ':' + min.to_s + ':' + sec.to_s
 end
-end
+
 
 end
