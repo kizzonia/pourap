@@ -21,6 +21,7 @@ before_create -> do
         self.title = video.title
         self.duration = parse_duration(video.duration)
         self.author = video.author.name
+        self.thumbnail = video.thumbnail_url
         self.likes = video.rating.likes
         self.dislikes = video.rating.dislikes
       rescue

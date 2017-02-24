@@ -5,6 +5,10 @@ class VideosController < ApplicationController
     @videos = Video.order('created_at DESC')
   end
 
+def show
+  @video = Video.find(params[:video][:link][:id])
+end
+
   def new
   @video = Video.new
 end

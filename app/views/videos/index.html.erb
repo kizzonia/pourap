@@ -4,13 +4,13 @@
   <div class="container">
     <h1>Latest videos</h1>
     <div id="player-wrapper"></div>
-    <% @videos.in_groups_of(3) do |group| %>
+    <% @videos.each do |group| %>
       <div class="row">
         <% group.each do |video| %>
 
             <div class="col-md-4">
               <div class="yt_video thumbnail">
-                <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+                <%= link_to image_tag(video.thumbnail_url, alt: video.title,
                                       class: 'img-rounded'),
                             "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
                 <div class="caption">
