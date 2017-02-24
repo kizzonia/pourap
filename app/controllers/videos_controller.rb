@@ -2,7 +2,7 @@ class VideosController < ApplicationController
   layout "bloggers", except:[:index, :show]
 
   def index
-    @videos = Video.order('created_at DESC')
+    @videos = Video.all.order('created_at DESC')
   end
 
 def show
