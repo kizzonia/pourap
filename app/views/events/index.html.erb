@@ -19,6 +19,8 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
+        <%= image_tag event.thumbnail.url(:medium), class: "img-responsive img-circle" %>
+
         <td><%= event.title %></td>
         <td><%= event.shortDescription %></td>
         <td><%= event.description %></td>
