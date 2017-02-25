@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @event.thumbnail.url(:medium), class: "img-responsive img-circle" %>
+
 <p>
   <strong>Title:</strong>
   <%= @event.title %>
@@ -7,7 +9,7 @@
 
 <p>
   <strong>Shortdescription:</strong>
-  <%= @event.shortDescription %>
+  <%= raw(@event.shortDescription) %>
 </p>
 
 <p>
