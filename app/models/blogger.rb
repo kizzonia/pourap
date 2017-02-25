@@ -7,6 +7,5 @@ validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\z/
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
- s3_region: ENV.fetch('AWS_REGION')
  
 end
