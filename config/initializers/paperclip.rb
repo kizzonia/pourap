@@ -7,7 +7,7 @@
 
 
 
-     Paperclip::Attachment.config.paperclip_defaults = {
+     Paperclip::Attachment.default_options = {
          storage: :s3,
          s3_credentials: {
            bucket: ENV.fetch('S3_BUCKET_NAME'),
