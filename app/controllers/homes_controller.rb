@@ -3,7 +3,9 @@ class HomesController < ApplicationController
   before_action :set_about, only: [:show, :edit, :update, :destroy]
 
   def index
-    @homes = Home.all.order("created_at DESC").limit(1)
+    @homes = Home.all.order("created_at DESC").limit(2)
+    @abouts = About.all
+
   end
 
   def show
