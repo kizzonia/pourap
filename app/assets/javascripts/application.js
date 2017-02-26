@@ -15,9 +15,9 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
+//= require uisearch
 //= require_tree .
 //= require classie
 //= require jquery.chocolat
 //= require wow.min
 //= require bloggers
-//= require uisearch

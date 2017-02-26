@@ -1,41 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="technology">
+	<div class="container">
+		<div class="col-md-9 technology-left">
+			<div class="agileinfo">
 
-<%= image_tag @event.thumbnail.url(:medium), class: "img-responsive img-circle" %>
+		  <h2 class="w3"><%= @event.title %>GE</h2>
+			<div class="single">
+        <%= image_tag @event.thumbnail.url(:medium), class: "img-responsive " %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+			    <div class="b-bottom">
+			      <h5 class="top">  <%= raw(@event.shortDescription) %>
+              </h5>
+				   <p class="sub">  <%= raw(@event.description) %>.</p>
+           <p class="sub">   <%= @event.location %> </p>
+           <p class="sub">  <%= @event.eventDate %> </p>
+           <p class="sub">   <%= raw(@event.sponsors) %> </p>
+           <p class="sub"> Social handler @<%= @event.socialLink %> </p?
 
-<p>
-  <strong>Shortdescription:</strong>
-  <%= raw(@event.shortDescription) %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Eventdate:</strong>
-  <%= @event.eventDate %>
-</p>
-
-<p>
-  <strong>Sponsors:</strong>
-  <%= @event.sponsors %>
-</p>
-
-<p>
-  <strong>Sociallink:</strong>
-  <%= @event.socialLink %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+				</div>
+			 </div>
+     </div>
+   </div>
+ </div>

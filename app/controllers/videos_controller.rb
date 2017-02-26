@@ -1,5 +1,6 @@
 class VideosController < ApplicationController
   layout "bloggers", except:[:index, :show]
+  before_action :set_about, only: [:destroy]
 
   def index
     @videos = Video.all.order('created_at DESC')
@@ -23,7 +24,15 @@ def create
   end
 end
 
+def destroy
+  @video.destroy
+  redirect_to @videos, notice: "video was removed"
+end
+
   private
+  def set_about
+    @video = Video.find(params[:id][:link][:video])
+  end
 
 
     def video_params
