@@ -71,10 +71,10 @@ class BannersController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_banner
-    @banner = banner.find(params[:id])
+    @banner = Banner.find(params[:id])
   end
     def banner_params
-      params.require(:banner).permit(:qoute, :qouter)
+      params.require(:banner).permit(:qoute, :qouter, :thumbnail)
     end
 
 end
