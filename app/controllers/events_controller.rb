@@ -37,7 +37,7 @@ class EventsController < InheritedResources::Base
 
       def destroy
         @event.destroy
-        redirect_to @events
+        redirect_to root_path
       end
 
 
