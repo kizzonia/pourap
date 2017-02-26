@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170224083119) do
+ActiveRecord::Schema.define(version: 20170226183311) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20170224083119) do
     t.string   "facebook"
     t.string   "twitter"
     t.text     "email"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
+  end
+
+  create_table "banners", force: :cascade do |t|
+    t.text     "qoute"
+    t.text     "qouter"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.string   "thumbnail_file_name"
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
