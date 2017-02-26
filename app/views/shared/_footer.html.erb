@@ -1,15 +1,6 @@
 <div class="footer">
 		<div class="container">
-			<div class="col-md-4 footer-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
-				<h4>About Us</h4>
-				<% @abouts.each do |about| %>>
-				<p><%= about.name %></p>
-				  <%= image_tag about.thumbnail.url(:medium), class: "img-responsive" %>
-					<div class="bht1">
-						<li><%= link_to "Abouts", about %></li>
-					</div>
-					<% end %>
-			</div>
+			
 			<div class="col-md-4 footer-middle wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
 			<h4>Latest Tweet</h4>
 			<div class="mid-btm">
