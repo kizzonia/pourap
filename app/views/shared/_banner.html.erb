@@ -4,7 +4,7 @@
     <% @banners.each do |banner| %>
     <div class="col-md-3">
       <%= image_tag banner.thumbnail.url(:medium), class: "img-responsive img-circle" %>
-      <p class="edit"><%= link_to 'Edit', edit_banner_path(banner),  %></p>
+      <p class="edit"><%= link_to 'Edit', edit_banner_path(banner)  %></p>
     </div>
     <div class="col-md-9">
       <h4 class="qoute">
