@@ -1,15 +1,4 @@
 GIT
-  remote: git://github.com/thoughtbot/paperclip.git
-  revision: 7c81e7813e75950d111885b44d33c08358e5e46c
-  specs:
-    paperclip (5.1.0)
-      activemodel (>= 4.2.0)
-      activesupport (>= 4.2.0)
-      cocaine (~> 0.5.5)
-      mime-types
-      mimemagic (~> 0.3.0)
-
-GIT
   remote: https://github.com/activeadmin/inherited_resources
   revision: 615b0d5c37a4bfc86ad18ec22b90d161fd996130
   specs:
@@ -26,6 +15,17 @@ GIT
     ckeditor (4.2.2)
       cocaine
       orm_adapter (~> 0.5.0)
+
+GIT
+  remote: https://github.com/thoughtbot/paperclip
+  revision: 7c81e7813e75950d111885b44d33c08358e5e46c
+  specs:
+    paperclip (5.1.0)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (~> 0.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -222,7 +222,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  aws-sdk (~> 2)
+  aws-sdk (> 2.0)
   bootstrap (~> 4.0.0.alpha3)
   byebug
   ckeditor!

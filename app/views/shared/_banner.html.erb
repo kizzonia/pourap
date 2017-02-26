@@ -1,10 +1,9 @@
-<div class="banner">
-<div class="container">
 
+<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<% @homes.each do |home| %>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<%= image_tag home.thumbnail.url(:medium), class: "img-responsive img-circle" %>
 				</div>
 
@@ -17,62 +16,8 @@
 
 			</div>
 		</div>
-	
+
 
 	</div>
-</div>
-<div class="services w3l wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
-		<div class="container">
-			<div class="grid_3 grid_5">
-				<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-					<ul id="myTab" class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">MUSIC</a></li>
-						<li role="presentation" class=""><a href="#safari" role="tab" id="safari-tab" data-toggle="tab" aria-controls="safari">VIDEOS</a></li>
-						<li role="presentation" class=""><a href="#trekking" role="tab" id="trekking-tab" data-toggle="tab" aria-controls="trekking">PROJECTS</a></li>
-					</ul>
-					<div id="myTabContent" class="tab-content">
-						<div role="tabpanel" class="tab-pane fade" id="expeditions" aria-labelledby="expeditions-tab">
 
-							<div class="col-md-4 col-sm-5 tab-image">
-                <%= image_tag "m4.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-							</div>
-							<div class="col-md-4 col-sm-5 tab-image">
-							  <%= image_tag "m1.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-							</div>
-							<div class="col-md-4 col-sm-5 tab-image">
-								  <%= image_tag "m2.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-
-
-						<div role="tabpanel" class="tab-pane fade" id="safari" aria-labelledby="safari-tab">
-							<div class="col-md-4 col-sm-5 tab-image">
-								  <%= image_tag "m2.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-							</div>
-							<div class="col-md-4 col-sm-5 tab-image">
-								  <%= image_tag "m5.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-							</div>
-							<div class="col-md-4 col-sm-5 tab-image">
-								  <%= image_tag "m3.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div role="tabpanel" class="tab-pane fade active in" id="trekking" aria-labelledby="trekking-tab">
-
-							<div class="col-md-4 col-sm-5 tab-image">
-								  <%= image_tag "f4.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-							</div>
-							<div class="col-md-4 col-sm-5 tab-image">
-								  <%= image_tag "f1.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-							</div>
-							<div class="col-md-4 col-sm-5 tab-image">
-								  <%= image_tag "g3.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		

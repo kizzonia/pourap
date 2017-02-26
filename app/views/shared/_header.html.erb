@@ -4,7 +4,10 @@
 				<div class="header-search">
 						<div class="search">
 							<input class="search_box" type="checkbox" id="search_box">
-							<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
+							<label class="icon-search" for="search_box">
+								<span >
+									<%= fa_icon "search", aria_hidden: "true" %>
+							</span></label>
 							<div class="search_form">
 								<form action="#" method="post">
 									<input type="text" name="Search" placeholder="Search...">
@@ -33,7 +36,7 @@
 							<li class="active act"><%= link_to "Home", root_path %></li>
 							<li><%= link_to "Events", events_path %></li>
 							<li><%= link_to "Videos", videos_path %></li>
-							<li><%= link_to "admin", bloggers_path %></li>
+							<li><%= link_to "Admin", bloggers_path %></li>
 							<li><a href="music.html">Music</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
@@ -44,10 +47,12 @@
 			</div>
 			<div class="nav navbar-nav navbar-right social-icons wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
 					<ul>
-						<li><%= fa_icon "facebook-square", class: "pin" %>></li>
-						<li><%= fa_icon "instagram", class: "pin" %></li>
-						<li><%= fa_icon "twitter-square", class: "in" %></li>
-						<li><%= fa_icon "vimeo-square", class: "vimeo" %></li>
+						<li><a href="#"> </a></li>
+						<li><a href="#" class="pin"> </a></li>
+						<li><a href="#" class="in"> </a></li>
+						<li><a href="#" class="be"> </a></li>
+
+						<li><a href="#" class="vimeo"> </a></li>
 					</ul>
 				</div>
 			<div class="clearfix"> </div>
