@@ -3,7 +3,6 @@ class EventsController < InheritedResources::Base
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   def index
     @events = Event.all.order('created_at DESC')
-    @abouts = About.all
 
   end
 
