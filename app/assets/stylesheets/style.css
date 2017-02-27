@@ -283,12 +283,13 @@ label.on{
 }
 /*--banner--*/
 .banner{
+	background-image: url("../assets/B1.jpg");
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
-min-height: 600px;
+min-height: 380px;
 }
 
 .banner-1{
@@ -1773,7 +1774,7 @@ label.on {
     padding: 9em 0 0;
 }
 .banner {
-    min-height: 480px;
+    min-height: 380px;
 }
 .tab-image {
     width: 33.33%;
@@ -1865,7 +1866,7 @@ h5.top {
     padding: 8em 0 0;
 }
 .banner {
-    min-height: 430px;
+    min-height: 350px;
 }
 .team-grid1 .p-mask {
     top: 92%;
