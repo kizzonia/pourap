@@ -3,7 +3,13 @@ class Music < ApplicationRecord
 validates_attachment_content_type :albumimage, content_type: /\Aimage\/.*\z/
 
 has_attached_file :song
-validates_attachment_content_type :song, content_type: "audio/mpeg", "audio/mp3", "audio/wmv",
-file_name: {matches: [/mp3\Z/]}
+validates_attachment_content_type :song,
+content_type: [
+  'application/mp3',
+  'application/x-mp3',
+  'audio/mpeg',
+  ['audio/mpeg'], # note the array around the type
+  'audio/mp3'
+]
 
 end
