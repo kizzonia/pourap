@@ -1,2 +1,15 @@
-<h1>Musics#show</h1>
-<p>Find me in app/views/musics/show.html.erb</p>
+<div class="technology">
+<div class="container">
+  <div class="col-md-9 technology-left">
+    <div class="agileinfo">
+
+    <h2 class="w3"><%= @music.songname %></h2>
+    <div class="single">
+       <%= image_tag @music.albumimage.url(:medium) %>
+        <div class="b-bottom">
+          <h5 class="top"><%= raw(@music.subtitle) %></h5>
+         <p class="sub"><%= raw(@music.discription) %>.</p>
+         <p class"sub" ><%= raw(@music.discography) %> </p>
+         <p class="sub"> <%= @music.published %> </p>
+      </div>
+     </div>
