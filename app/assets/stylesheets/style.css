@@ -3,6 +3,9 @@ html, body{
 font-family: 'Raleway', sans-serif;
 	font-size: 100%;
 	background: #fffcf0;
+	margin: 0 auto;
+	padding: 0px;
+	overflow-x:hidden;
 }
 body a,.grid_1,plan_1,plan_1.one,plan_1.two,i.icon1, i.icon2, i.icon3, i.icon4, i.icon5, i.icon6 {
 	transition:0.5s all;
@@ -39,6 +42,9 @@ ul{
 }
 label{
 	margin:0;
+}
+.color {
+	background-color: #fff;
 }
 /*-- Header --*/
 .header {
@@ -289,7 +295,32 @@ background-size:cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
-min-height: 380px;
+height: 380px;
+}
+.cover{
+	background-color: #000;
+	background-size: cover;
+	opacity: 0.6;
+	position: relative;
+	margin-top: -160px;
+	overflow:hidden;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+	background-repeat: no-repeat;
+	height: 380px;
+
+}
+.cover-qoute{
+	margin-top: 70px;
+	padding :10px;
+
+}
+ .cimg{
+	min-width: 300px;
+	min-height: 300px;
+
 }
 
 .banner-1{
@@ -325,9 +356,9 @@ min-height: 250px;
     padding: 10em 0 0;
     text-align: center;
 }
-.banner p {
+.ctext p {
     font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.46);
+    color: #fff;
     font-weight: 400;
     line-height: 1.8em;
     margin: 1em auto 2em;
@@ -372,6 +403,12 @@ min-height: 250px;
     padding: 1em 0;
     text-align: left;
 }
+.tch-img img{
+	width: 700px;
+	height: 350px;
+}
+
+
 .blog-poast-info ul li {
 	display:inline-table;
 	margin-right: 1em;
@@ -1653,7 +1690,7 @@ label.of {
 label.on {
     left: 586px
 }
-.banner p {
+.ctext p {
     width: 80%;
 }
 .tc-ch h6, .wthree h6 {
@@ -1766,7 +1803,7 @@ label.on {
 .banner h2 {
     font-size: 2em;
 }
-.banner p {
+.ctext p {
     font-size: 1em;
     width: 90%;
 }
@@ -1775,6 +1812,10 @@ label.on {
 }
 .banner {
     min-height: 380px;
+}
+.cover{
+	margin-top: -145px;
+	min-height: 380px;
 }
 .tab-image {
     width: 33.33%;
@@ -1859,6 +1900,7 @@ h5.top {
 }
 /*-- responsive design --*/
 @media (max-width:800px) {
+
 }
 /*-- responsive design --*/
 @media (max-width:768px) {
@@ -1867,6 +1909,10 @@ h5.top {
 }
 .banner {
     min-height: 350px;
+}
+.cover{
+	margin-top: -130px;
+	min-height: 350px;
 }
 .team-grid1 .p-mask {
     top: 92%;
@@ -2017,7 +2063,11 @@ label.on {
 .banner h2 {
     font-size: 1.6em;
 }
-.banner p {
+.cover{
+	margin-top: -130px;
+	min-height: 350px;
+}
+.ctext p {
     font-size: 0.95em;
     width: 100%;
 }
@@ -2033,6 +2083,24 @@ abel.icon-search span {
 @media (max-width:640px) {
 .banner {
     min-height: 380px;
+}
+.cover{
+	margin-top: -130px;
+	min-height: 380px;
+}
+
+.cimg{
+	position: relative;
+	margin-left:90px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:8px;
+padding: 10px;
+margin:10px;
+width: 100%;
 }
 label.of {
     left: 102px;
@@ -2055,6 +2123,23 @@ label.on {
 label.of {
     left: 80px;
 }
+.cover{
+	margin-top: -130px;
+	min-height: 350px;
+}
+.cimg{
+	position: relative;
+	margin-left:80px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:8px;
+padding: 10px;
+margin:10px;
+width: 100%;
+}
 label.on {
     left: 386px;
 }
@@ -2076,11 +2161,28 @@ label.on {
 .banner h2 {
     font-size: 1.4em;
 }
-.banner p {
+.ctext p {
     font-size: 0.875em;
+}
+.cimg{
+	position: relative;
+	margin-left:60px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:8px;
+padding: 10px;
+margin:10px;
+width: 100%;
 }
 .banner {
     min-height: 350px;
+}
+.cover{
+	margin-top: -130px;
+	min-height: 350px;
 }
 .navbar-toggle {
     margin-right: 102px;
@@ -2106,6 +2208,23 @@ label.on {
 .banner {
     min-height: 326px;
 	padding: 5em 0 0;
+}
+.cover{
+	margin-top: -80px;
+	min-height: 326px;
+}
+.cimg{
+	position: relative;
+	margin-left:16px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:8px;
+padding: 10px;
+margin:10px;
+width: 100%;
 }
 .bht a {
     padding: 0.5em 1em;
@@ -2170,7 +2289,24 @@ label.on {
     padding: 4em 0 0;
 	min-height: 300px;
 }
-.banner p {
+.cover{
+	min-height: 300px;
+	margin-top: -65px;
+}
+.cimg{
+	position: relative;
+	margin-left:-5px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:8px;
+padding: 10px;
+margin:10px;
+width: 100%;
+}
+.ctext p {
     font-size: 0.8125em;
     width: 100%;
 }
@@ -2240,6 +2376,148 @@ label.icon-search span {
     margin-top: 2em;
 }
 }
+@media (max-width:400px) {
+.logo h1 a {
+    font-size: 0.95em;
+}
+.logo p {
+    font-size: 12px;
+}
+label.of {
+    margin-top: -28px;
+    left:23
+}
+label.on {
+    left: 266px;
+	 margin-top: -28px;
+}
+.banner h2 {
+    line-height: 1.4em;
+}
+.cover{
+	margin-top: -50px;
+
+}
+.cimg{
+	position: relative;
+	margin-left:-5px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:8px;
+padding: 10px;
+margin:10px;
+width: 100%;
+}
+.banner a {
+    padding: 0.5em 1em;;
+}
+.ctext p {
+    margin: 1em auto 1em;
+}
+.banner {
+    padding: 3em 0 0;
+}
+.name form input[type="text"] {
+    font-size: 14px;
+    padding: .8em;
+}
+.search-1 input[type="search"] {
+    width: 83%;
+}
+.navbar-toggle {
+    margin-right: 56px;
+}
+.search_box:checked~.search_form {
+    width: 333px;
+}
+.search_form input[type='text'] {
+    width: 213px;
+}
+.head-left {
+    width: 18%;
+}
+.social-icons {
+    width: 35%;
+}
+.coment-form input[type="submit"] {
+    width: 57%;
+	font-size:14px;
+}
+}
+@media (max-width:389px) {
+.logo h1 a {
+    font-size: 0.95em;
+}
+.logo p {
+    font-size: 12px;
+}
+label.of {
+    margin-top: -28px;
+    left:23
+}
+.cimg{
+	position: relative;
+	margin-left:-5px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:8px;
+padding: 10px;
+margin:10px;
+width: 100%;
+}
+label.on {
+    left: 266px;
+	 margin-top: -28px;
+}
+.banner h2 {
+    line-height: 1.4em;
+}
+.cover{
+	margin-top: -52px;
+
+}
+.banner a {
+    padding: 0.5em 1em;;
+}
+.ctext p {
+    margin: 1em auto 1em;
+}
+.banner {
+    padding: 3em 0 0;
+}
+.name form input[type="text"] {
+    font-size: 14px;
+    padding: .8em;
+}
+.search-1 input[type="search"] {
+    width: 83%;
+}
+.navbar-toggle {
+    margin-right: 56px;
+}
+.search_box:checked~.search_form {
+    width: 333px;
+}
+.search_form input[type='text'] {
+    width: 213px;
+}
+.head-left {
+    width: 18%;
+}
+.social-icons {
+    width: 35%;
+}
+.coment-form input[type="submit"] {
+    width: 57%;
+	font-size:14px;
+}
+}
 /*-- responsive design --*/
 @media (max-width:384px) {
 .logo h1 a {
@@ -2259,10 +2537,27 @@ label.on {
 .banner h2 {
     line-height: 1.4em;
 }
+.cover{
+	min-height: 300px;
+	margin-top: -50px;
+}
+.cimg{
+	position: relative;
+	margin-left:10px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:10px;
+padding: 10px;
+margin:10px;
+width: 100%;
+}
 .banner a {
     padding: 0.5em 1em;;
 }
-.banner p {
+.ctext p {
     margin: 1em auto 1em;
 }
 .banner {
@@ -2303,6 +2598,23 @@ label.of {
 label.on {
     left: 260px;
 }
+.cover{
+	min-height: 300px;
+	margin-top: -46px;
+}
+.cimg{
+	position: relative;
+	margin-left:-40px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:8px;
+padding: 10px;
+margin:10px;
+width: 100%;
+}
 .head-left {
     width: 4%;
 }
@@ -2330,8 +2642,29 @@ label.on {
 	width:42px;
 }
 .banner {
-    min-height: 300px;
+    min-height: 320px;
 	padding:2em 0 0;
+}
+.tch-img img{
+
+	height: 200px;
+}
+.cover{
+	min-height: 320px;
+	margin-top: -35px;
+}
+.cimg{
+	position: relative;
+	margin-left:-40px;
+	margin-top:-25px;
+}
+.ctext{
+position:absolute;
+top:120px;
+left:8px;
+padding: 10px;
+margin:10px;
+width: 100%;
 }
 .tab-image {
     width: 100%;

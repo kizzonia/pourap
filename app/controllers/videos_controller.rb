@@ -1,7 +1,6 @@
 class VideosController < ApplicationController
   layout "bloggers", except:[:index, :show]
-  before_action :set_about, only: [:destroy]
-
+ before_action :set_about, only: [:show, :destroy]
   def index
     @videos = Video.all.order('created_at DESC')
     @abouts = About.all
@@ -9,7 +8,6 @@ class VideosController < ApplicationController
   end
 
 def show
-  @video = Video.find(params[:video][:link][:id])
 end
 
   def new
@@ -17,7 +15,7 @@ end
 end
 
 def create
-@video = Video.new(link: params[:video][:link])
+@video = Video.new( video_params[:video][:link])
   if @video.save
     flash[:success] = 'Video added!'
     redirect_to root_url
@@ -28,7 +26,7 @@ end
 
 def destroy
   @video.destroy
-  redirect_to @videos, notice: "video was removed"
+  redirect_to videos_url, notice: "video was removed"
 end
 
   private
@@ -38,6 +36,6 @@ end
 
 
     def video_params
-    params.require(:video).permit(:link)
+    params.require(:video).permit(:link, :title, :description, :story)
   end
 end

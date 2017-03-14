@@ -1,0 +1,35 @@
+<%= simple_form_for(@music, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.error_notification %>
+<div class="form-group">
+  <%= f.input :albumimage, as: :file, label: "Album Image", class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.input :songname, label: "Song Title", class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.input :artist, label: "Song artist", class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.input :subtitle, label: "Song SubStory", class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.input :description, label: "Song Discription", class: "form-control", as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+</div>
+
+<div class="form-group">
+  <%= f.input :discography, label: "Song discography", class: "form-control", as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+</div>
+
+<div class="form-group">
+  <%= f.input :published, label: "Release Date" %>
+</div>
+
+<div class="form-group">
+  <%= f.submit :submit, class: "btn btn-success" %>
+</div>
+
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  songName: MyString
+  description: MyText
+  artist: MyString
+  discography: MyText
+  published: 2017-03-07 13:41:06
+  subtitle: MyText
+
+two:
+  songName: MyString
+  description: MyText
+  artist: MyString
+  discography: MyText
+  published: 2017-03-07 13:41:06
+  subtitle: MyText

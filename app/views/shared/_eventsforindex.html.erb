@@ -3,27 +3,18 @@
  <div class="tc-ch wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
 
     <div class="tch-img">
-      <%= image_tag event.thumbnail.url(:medium), class: "img-responsive" %>
+      <%= image_tag "f1.jpg", class: "img-responsive" %>
     </div>
 
-    <h3><%=link_to event.title %></h3>
+    <h3><%= link_to event.title, event %></h3>
     <h6>Posted at <%= event.created_at.strftime("%b, %d, %y") %></h6>
-      <p><%= raw(event.shortDescription) %>.</p>
-      <P><%= event.location %></P>
-      <p><%= event.eventDate %></p>
+      <p><%= raw(event.shortDescription)%>.</p>
+      <P> Project Location: <%= event.location %></P>
+      <p> Will be aired at <%= event.eventDate %></p>
+
       <div class="bht1">
         <%= link_to "Continue Reading", event %>
       </div>
-      <div class="btn btn-warning">
-        <%= link_to event, method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <%= fa_icon "trash-o" %>
-          <% end %>
-        </div>
-        <div class="btn btn-warning">
-          <%= link_to edit_event_path(event) do %>
-            <%= fa_icon "pencil-square-o" %>
-            <% end %>
-          </div>
 
       <div class="soci">
         <ul>
@@ -36,5 +27,6 @@
       </div>
       <div class="clearfix"></div>
 </div>
-  <% end %>
+
 <div class="clearfix"></div>
+  <% end %>

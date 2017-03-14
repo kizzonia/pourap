@@ -1,24 +1,19 @@
+<div class=" banner ">
+	<div class="cover">
+		<div class="container">
+			<div class="col-md-12 cover-qoute">
+				<% @banners.each do |banner| %>
+				<div class=" col-md-4 col-sm-4 col-xs-4 cimg">
+					<%= image_tag banner.thumbnail.url(:medium), class: 'img-responsive img-rounded' %>
+				</div>
 
-<div class="banner">
-  <div class="container">
-    <% @banners.each do |banner| %>
-    <div class="col-md-3">
-      <%= image_tag banner.thumbnail.url(:medium), class: "img-responsive img-circle" %>
-      <p class="edit"><%= link_to 'Edit', edit_banner_path(banner),  %></p>
-    </div>
-    <div class="col-md-9">
-      <h4 class="qoute">
-        <%=raw(banner.qoute) %>
-      </h4>
-      <p> <%= banner.qouter %> </p>
-    </div>
-
-
-        <p class="text-center"><%= link_to 'Destroy', banner, method: :delete, data: { confirm: 'Are you sure?' } %></]>
-
-    <% end %>
-
-
-
+				<div class="col-md-8 col-sm-6 col-xs-6  ctext">
+					<p style="color:#fff;">" <%= banner.qoute %> " </p>
+					<p class="text-center"> <%=banner.qouter %> </p>
+				</div>
+				<% end %>
 			</div>
+
 		</div>
+	</div>
+</div>

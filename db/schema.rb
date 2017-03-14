@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170226183311) do
+ActiveRecord::Schema.define(version: 20170312231949) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "name"
@@ -98,6 +98,21 @@ ActiveRecord::Schema.define(version: 20170226183311) do
     t.datetime "thumbnail_updated_at"
   end
 
+  create_table "musics", force: :cascade do |t|
+    t.string   "songname"
+    t.text     "description"
+    t.string   "artist"
+    t.text     "discography"
+    t.datetime "published"
+    t.text     "subtitle"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "albumimage_file_name"
+    t.string   "albumimage_content_type"
+    t.integer  "albumimage_file_size"
+    t.datetime "albumimage_updated_at"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.text     "date"
@@ -110,6 +125,7 @@ ActiveRecord::Schema.define(version: 20170226183311) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+    t.datetime "datemain"
   end
 
   create_table "videos", force: :cascade do |t|
@@ -121,6 +137,8 @@ ActiveRecord::Schema.define(version: 20170226183311) do
     t.string   "uid"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.text     "description"
+    t.text     "story"
     t.index ["uid"], name: "index_videos_on_uid"
   end
 
