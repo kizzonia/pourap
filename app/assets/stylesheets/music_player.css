@@ -1,5 +1,5 @@
 .jp-gui button {
-    border: none;
+    border: medium none;
     color: #ffffff;
     font-size: 16px;
     height: 20px;
@@ -17,7 +17,7 @@
     margin: auto;
     padding: 10px ;
     text-align: center;
-    width: auto;
+    width: 160px;
 }
 
 .jp-volume-controls {
@@ -31,7 +31,7 @@
 }
 
 .jp-volume-bar {
-    background-color: #eee;
+    background-color: #000;
     cursor: pointer;
     float: right;
     height: 15px;
