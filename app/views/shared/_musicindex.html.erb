@@ -1,0 +1,29 @@
+<% @musics.each do |event| %>
+<div class="wthree">
+   <div class="col-md-6 wthree-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+    <div class="tch-img-small">
+      <%= image_tag music.albumimage.url(:medium), class: "img-responsive" %>
+      </div>
+   </div>
+   <div class="col-md-6 wthree-right wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+      <h3><%= link_to music.songname, music %></h3>
+      <h6>Posted at <%= music.created_at.strftime("%b, %d, %y") %></h6>
+        <p><%= raw(music.description) %></p>
+        <p>By <%= music.artist %> </p>
+        <div class="bht1">
+          <%= link_to "Read More", music %>
+        </div>
+        <div class="soci">
+          <ul>
+
+            <li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
+            <li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+
+   </div>
+    <div class="clearfix"></div>
+</div>
+
+<% end %>
