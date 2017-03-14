@@ -3,6 +3,7 @@ class MusicsController < ApplicationController
   before_action :set_music, only:[:show, :edit, :update, :destroy]
 
   def index
+    @musics = Music.all.order("created_at DESC")
   end
 
   def show
