@@ -4,7 +4,7 @@
     <div class="music">
       <div class="latest">
           <h2 class="w3">MUSIC</h2>
-          <% musics.each do |music| %>
+          <% @musics.each do |music| %>
           <div class="tip-grids">
             <div class="col-md-6 tip-grid">
                 <%= link_to music do %>
@@ -19,6 +19,15 @@
                 <p><%= raw(music.subtitle) %></p>
                   <p> <%= raw(music.description) %>. .</p>
               </div>
+            </div>
+            <div class="bht1">
+              <%= link_to "View Single ", music %>
+            </div>
+            <div class="soci">
+              <ul>
+                <li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
+                <li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
+              </ul>
             </div>
             <div class="clearfix"></div>
           </div>
