@@ -12,4 +12,5 @@ content_type: [
   'audio/mp3'
 ]
 
+has_many :musiccomments
 end

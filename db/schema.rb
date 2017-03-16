@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314055706) do
+ActiveRecord::Schema.define(version: 20170316192533) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "name"
@@ -96,6 +96,15 @@ ActiveRecord::Schema.define(version: 20170314055706) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+  end
+
+  create_table "musiccomments", force: :cascade do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "music_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["music_id"], name: "index_musiccomments_on_music_id"
   end
 
   create_table "musics", force: :cascade do |t|
