@@ -34,7 +34,7 @@ h1,h2,h3,h4,h5,h6{
 }
 p{
 	margin:0;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 ul{
 	margin:0;
@@ -47,7 +47,11 @@ label{
 	background-color: #fff;
 }
 .play i{
-	color: #E53A40;
+	color:#E53A40;
+	font-size: 25px;
+	position:relative;
+	margin-top: -30px;
+	margin-left: 40px;
 
 }
 /*-- Header --*/
