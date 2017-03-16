@@ -48,15 +48,15 @@ label{
 }
 .play {
 	color:#E53A40;
-	position:absolute;
-	top: 100px;
+	position:relative;
+	margin-top: -100px;
 	margin-left: 135px;
 
 }
 .play2 {
 	color:#E53A40;
-	position:absolute;
-	top: 80px;
+	position:relative;
+	margin-top: -80px;
 	margin-left: 145px;
 
 }
@@ -438,7 +438,7 @@ min-height: 250px;
 }
 
 .tch-img{
-	height: 400px;
+	height: 600px;
 	padding: 20px;
 }
 
@@ -1853,9 +1853,9 @@ label.on {
 	min-height: 380px;
 }
 .play2 {
-	position:absolute;
-	top: 80px;
-	margin-left: 145px;
+	position:relative;
+	margin-top: 50%;
+
 
 }
 .tab-image {
@@ -2114,12 +2114,7 @@ label.on {
 	margin-top: -130px;
 	min-height: 350px;
 }
-.play2 {
 
-	top: 60px;
-	margin-left: 120px;
-
-}
 .ctext h4 {
     font-size: 0.95em;
     width: 100%;
@@ -2146,12 +2141,12 @@ abel.icon-search span {
 }
 .cimg{
 	position: relative;
-	margin-left:120px;
+	margin-left:150px;
 	margin-top:-25px;
 }
 .ctext{
 position:absolute;
-top:120px;
+top:150px;
 left:8px;
 padding: 10px;
 margin:10px;
