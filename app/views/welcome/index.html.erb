@@ -10,7 +10,7 @@
       </ul>
       <div id="myTabContent" class="tab-content">
         <div role="tabpanel" class="tab-pane fade" id="expeditions" aria-labelledby="expeditions-tab">
-          <%= @music.each do |music| %>
+          <% @musics.take(3).each do |music| %>
           <div class="col-md-4 col-sm-5 tab-image">
             <%= link_to music do %>
             <%= image_tag music.thumbnail.url(:medium), class: "img-responsive b-pourap", alt: "Wanderer" %>
@@ -22,28 +22,27 @@
 
 
         <div role="tabpanel" class="tab-pane fade" id="safari" aria-labelledby="safari-tab">
+          <% @videos.take(3).each do |video| %>
           <div class="col-md-4 col-sm-5 tab-image">
-              <%= image_tag "m2.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-          </div>
-          <div class="col-md-4 col-sm-5 tab-image">
-              <%= image_tag "m5.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-          </div>
-          <div class="col-md-4 col-sm-5 tab-image">
-              <%= image_tag "m3.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-          </div>
+            <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+            class: ' img-responsive b-pourap '),
+              "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' do %>
+              <span class"play"><%= fa_icon "youtube-play" %></span>
+              <%end%>
+            </div>
+            <% end %>
+
           <div class="clearfix"></div>
         </div>
         <div role="tabpanel" class="tab-pane fade active in" id="trekking" aria-labelledby="trekking-tab">
+          <% @events.take(3).each do |event|%>
+          <div class="col-md-4 col-sm-5 tab-image">
+            <%= link_to event do %>
+              <%= image_tag event.thumbnail.url(:medium), class: "img-responsive b-pourap", alt: "Wanderer" %>
+              <% end %>
+          </div>
+          <% end %>
 
-          <div class="col-md-4 col-sm-5 tab-image">
-              <%= image_tag "f4.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-          </div>
-          <div class="col-md-4 col-sm-5 tab-image">
-              <%= image_tag "f1.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-          </div>
-          <div class="col-md-4 col-sm-5 tab-image">
-              <%= image_tag "g3.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-          </div>
           <div class="clearfix"></div>
         </div>
       </div>
