@@ -48,9 +48,9 @@ label{
 }
 .play {
 	color:#E53A40;
-	font-size: 25px;
-	position:relative;
-	margin-top: -30px;
+	font-size: 90px;
+	position:absolute;
+	top: 80px;
 	margin-left: 40px;
 
 }
@@ -381,10 +381,11 @@ min-height: 250px;
     width: 70%;
 		font-family: 'Raleway', sans-serif;;
 }
-.qouter{
-	font-size: 12px;
+.qouter p{
+	font-size: 10px;
 	position: relative;
-	margin-top: -20px;
+	margin-top: -80px;
+	margin-left: -40px
 }
 /*--banner--*/
 .tab-content>.tab-pane {
