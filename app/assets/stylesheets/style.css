@@ -46,6 +46,10 @@ label{
 .color {
 	background-color: #fff;
 }
+.play i{
+	color: #E53A40;
+
+}
 /*-- Header --*/
 .header {
     background: #FFF;
@@ -300,7 +304,7 @@ height: 380px;
 .cover{
 	background-color: #000;
 	background-size: cover;
-	opacity: 0.6;
+	opacity: 0.8;
 	position: relative;
 	margin-top: -160px;
 	overflow:hidden;
@@ -318,8 +322,11 @@ height: 380px;
 
 }
  .cimg{
-	min-width: 300px;
-	min-height: 300px;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	margin-top: -10px;
+
 
 }
 
@@ -333,7 +340,12 @@ min-height: 250px;
 }
  .b-pourap{
 	 height:200px;
-	 width: auto;
+	 width: 380px;
+	 position: relative;
+	 margin-left: 5px;
+ }
+ .b-pourap img {
+	 width: 100%;
  }
 .banner a {
     font-size: 1em;
@@ -357,12 +369,13 @@ min-height: 250px;
     text-align: center;
 }
 .ctext p {
-    font-size: 1.2em;
+    font-size: 2em;
     color: #fff;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.8em;
     margin: 1em auto 2em;
     width: 70%;
+		font-family: 'Oswald', sans-serif;;
 }
 /*--banner--*/
 .tab-content>.tab-pane {
@@ -404,10 +417,13 @@ min-height: 250px;
     text-align: left;
 }
 .tch-img img{
-	width: 700px;
+	width:auto;
 	height: 350px;
 }
 
+.tch-img{
+	width: 700px;
+}
 
 .blog-poast-info ul li {
 	display:inline-table;
@@ -2012,6 +2028,9 @@ h5.top {
     padding: 2em 2em;
     background: #fff;
 }
+.b-pourap{
+	height: 170px;
+}
 .footer-left, .footer-middle, .footer-right {
     float: left;
     width: 100%;
@@ -2063,6 +2082,9 @@ label.on {
 .banner h2 {
     font-size: 1.6em;
 }
+.b-pourap{
+	height: 150px;
+}
 .cover{
 	margin-top: -130px;
 	min-height: 350px;
@@ -2088,10 +2110,12 @@ abel.icon-search span {
 	margin-top: -130px;
 	min-height: 380px;
 }
-
+.b-pourap{
+	height: 130px;
+}
 .cimg{
 	position: relative;
-	margin-left:90px;
+	margin-left:120px;
 	margin-top:-25px;
 }
 .ctext{
@@ -2123,18 +2147,21 @@ label.on {
 label.of {
     left: 80px;
 }
+.b-pourap{
+	height: 80px;
+}
 .cover{
 	margin-top: -130px;
 	min-height: 350px;
 }
 .cimg{
 	position: relative;
-	margin-left:80px;
+	margin-left:100px;
 	margin-top:-25px;
 }
 .ctext{
 position:absolute;
-top:120px;
+top:150px;
 left:8px;
 padding: 10px;
 margin:10px;

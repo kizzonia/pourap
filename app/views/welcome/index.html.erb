@@ -10,16 +10,13 @@
       </ul>
       <div id="myTabContent" class="tab-content">
         <div role="tabpanel" class="tab-pane fade" id="expeditions" aria-labelledby="expeditions-tab">
-
+          <%= @music.each do |music| %>
           <div class="col-md-4 col-sm-5 tab-image">
-            <%= image_tag "m4.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
+            <%= link_to music do %>
+            <%= image_tag music.thumbnail.url(:medium), class: "img-responsive b-pourap", alt: "Wanderer" %>
+            <% end %>
           </div>
-          <div class="col-md-4 col-sm-5 tab-image">
-            <%= image_tag "m1.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-          </div>
-          <div class="col-md-4 col-sm-5 tab-image">
-              <%= image_tag "m2.jpg", class: "img-responsive b-pourap", alt: "Wanderer" %>
-          </div>
+          <%end %>
           <div class="clearfix"></div>
         </div>
 
@@ -63,7 +60,7 @@
 	<div class="container">
 		<div class="col-md-9 technology-left">
 		<div class="tech-no">
-      <h3> Projects </h3>
+      <h3> Shout Out </h3>
         <%= render "shared/eventsforindex" %>
         <h3 > Latest Videos </h4>
           <%= render "shared/videoforindex" %>
@@ -75,3 +72,6 @@
 
       </div>
     </div>
+    <!-- side bar -->
+  </div>
+</div>

@@ -15,7 +15,7 @@ end
 end
 
 def create
-@video = Video.new( video_params[:video][:link])
+@video = Video.new( [:video][:link][:title][:description])
   if @video.save
     flash[:success] = 'Video added!'
     redirect_to root_url

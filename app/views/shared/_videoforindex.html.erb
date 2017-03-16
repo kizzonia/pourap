@@ -1,28 +1,28 @@
 
 <div class="w3ls">
   <% @videos.each do |video| %>
-  <div class="col-md-4 w3ls-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+  <div class="col-md-6 w3ls-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
      <div class="tc-ch">
       <div class="tch-img-video">
         <%= link_to image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
                               class: 'img-rounded img-responsive'),
-                    "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' %>
+                    "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' do %>
+                    <span class"play"><%= fa_icon "youtube-play" %></span>
+                    <%end%>
       </div>
-
       <h3><%= video.title %></h3>
-        <p><%= raw(video.description) %>.</p>
         <div class="bht1">
           <%= link_to "Watch On Youtube ", "https://www.youtube.com/watch?v=#{video.uid}" %>
         </div>
         <div class="soci">
           <ul>
             <li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
-            <li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
           </ul>
         </div>
         <div class="clearfix"></div>
     </div>
   </div>
-  <div class="clearfix"></div>
   <% end %>
+  <div class="clearfix"></div>
+
 </div>
