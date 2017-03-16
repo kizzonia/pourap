@@ -49,8 +49,15 @@ label{
 .play {
 	color:#E53A40;
 	position:absolute;
-	top: 120px;
-	margin-left: 120px;
+	top: 100px;
+	margin-left: 135px;
+
+}
+.play2 {
+	color:#E53A40;
+	position:absolute;
+	top: 40px;
+	margin-left: 135px;
 
 }
 .play i{
