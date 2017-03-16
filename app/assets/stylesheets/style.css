@@ -422,7 +422,7 @@ min-height: 250px;
 }
 .tch-img img{
 	width:100%;
-	height: 350px;
+	height: auto;
 }
 
 
@@ -2121,7 +2121,7 @@ abel.icon-search span {
 }
 .ctext{
 position:absolute;
-top:120px;
+top:100px;
 left:8px;
 padding: 10px;
 margin:10px;

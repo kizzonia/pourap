@@ -6,7 +6,7 @@
     <div class="tch-img col-md-12">
       <%= image_tag event.thumbnail.url(:large), class: "img-responsive" %>
     </div>
-
+    <br>
     <h3><%= link_to event.title, event %></h3>
     <h6>Posted at <%= event.created_at.strftime("%b, %d, %y") %></h6>
       <%= raw(event.shortDescription)%>
