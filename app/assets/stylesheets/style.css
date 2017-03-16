@@ -46,7 +46,7 @@ label{
 .color {
 	background-color: #fff;
 }
-.play i{
+.play {
 	color:#E53A40;
 	font-size: 25px;
 	position:relative;
@@ -376,10 +376,15 @@ min-height: 250px;
     font-size: 2em;
     color: #fff;
     font-weight: 600;
-    line-height: 1.8em;
+    line-height: 1.5;
     margin: 1em auto 2em;
     width: 70%;
-		font-family: 'Oswald', sans-serif;;
+		font-family: 'Raleway', sans-serif;;
+}
+.qouter{
+	font-size: 12px;
+	position: relative;
+	margin-top: -20px;
 }
 /*--banner--*/
 .tab-content>.tab-pane {
@@ -2121,7 +2126,7 @@ abel.icon-search span {
 }
 .ctext{
 position:absolute;
-top:100px;
+top:120px;
 left:8px;
 padding: 10px;
 margin:10px;
