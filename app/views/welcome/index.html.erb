@@ -13,7 +13,7 @@
           <% @musics.take(3).each do |music| %>
           <div class="col-md-4 col-sm-5 tab-image">
             <%= link_to music do %>
-            <%= image_tag music.thumbnail.url(:medium), class: "img-responsive b-pourap", alt: "Wanderer" %>
+            <%= image_tag music.albumimage.url(:medium), class: "img-responsive b-pourap", alt: "Wanderer" %>
             <% end %>
           </div>
           <%end %>
