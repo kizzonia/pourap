@@ -4,10 +4,9 @@
       <div class="gallery" id="gallery">
 
         <div class="gallery-grids">
+          <% @videos.each do |video| %>
           <div class="gallery-grid">
-            <% @videos.each do |video| %>
-            <div class="col-md-4 w3ls-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
-              <div class="tc-ch">
+
                 <div class="tch-img-video">
                   <%= link_to "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' do %>
                   <%= image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
