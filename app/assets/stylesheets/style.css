@@ -51,7 +51,8 @@ label{
 	font-size: 90px;
 	position:absolute;
 	top: 140px;
-	margin-left: 1000px;
+	width: 100px;
+	margin-left: 100px;
 
 }
 .play i{
@@ -389,6 +390,7 @@ min-height: 250px;
 	position: relative;
 	margin-top: -80px;
 	margin-left: -40px
+	color: #fff;
 }
 /*--banner--*/
 .tab-content>.tab-pane {
