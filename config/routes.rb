@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :banners, except: [:show]
   mount Ckeditor::Engine => '/ckeditor'
-  resources :events
+  resources :events do
+    resources :eventcomments
+  end
   devise_for :bloggers
   resources :projects
   resources :abouts
@@ -13,8 +15,7 @@ Rails.application.routes.draw do
   resources :homes
   resources :musics do
     resources :musiccomments
-  end
-  end
+    end
   root 'welcome#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
