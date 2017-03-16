@@ -48,9 +48,9 @@ label{
 }
 .play {
 	color:#E53A40;
-	osition:absolute;
-	top: 50px;
-	margin-left: 100px;
+	position:absolute;
+	top: 120px;
+	margin-left: 120px;
 
 }
 .play i{
@@ -374,14 +374,18 @@ min-height: 250px;
     padding: 10em 0 0;
     text-align: center;
 }
-.ctext p {
+.ctext h4 {
     font-size: 2em;
     color: #fff;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.0;
     margin: 1em auto 2em;
-    width: 70%;
+		margin-bottom: 0
+    width: 60%;
 		font-family: 'Raleway', sans-serif;;
+}
+.ctext h4{
+
 }
 
 /*--banner--*/
@@ -1710,7 +1714,7 @@ label.of {
 label.on {
     left: 586px
 }
-.ctext p {
+.ctext h4 {
     width: 80%;
 }
 .tc-ch h6, .wthree h6 {
@@ -1823,7 +1827,7 @@ label.on {
 .banner h2 {
     font-size: 2em;
 }
-.ctext p {
+.ctext h4 {
     font-size: 1em;
     width: 90%;
 }
@@ -2093,7 +2097,7 @@ label.on {
 	margin-top: -130px;
 	min-height: 350px;
 }
-.ctext p {
+.ctext h4 {
     font-size: 0.95em;
     width: 100%;
 }
@@ -2192,7 +2196,7 @@ label.on {
 .banner h2 {
     font-size: 1.4em;
 }
-.ctext p {
+.ctext h4 {
     font-size: 0.875em;
 }
 .cimg{
@@ -2337,7 +2341,7 @@ padding: 10px;
 margin:10px;
 width: 100%;
 }
-.ctext p {
+.ctext h4 {
     font-size: 0.8125em;
     width: 100%;
 }
@@ -2445,7 +2449,7 @@ width: 100%;
 .banner a {
     padding: 0.5em 1em;;
 }
-.ctext p {
+.ctext h4 {
     margin: 1em auto 1em;
 }
 .banner {
@@ -2516,7 +2520,7 @@ label.on {
 .banner a {
     padding: 0.5em 1em;;
 }
-.ctext p {
+.ctext h4 {
     margin: 1em auto 1em;
 }
 .banner {
@@ -2588,7 +2592,7 @@ width: 100%;
 .banner a {
     padding: 0.5em 1em;;
 }
-.ctext p {
+.ctext h4 {
     margin: 1em auto 1em;
 }
 .banner {
