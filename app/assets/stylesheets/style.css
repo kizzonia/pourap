@@ -417,13 +417,10 @@ min-height: 250px;
     text-align: left;
 }
 .tch-img img{
-	width:auto;
+	width:100%;
 	height: 350px;
 }
 
-.tch-img{
-	width: 700px;
-}
 
 .blog-poast-info ul li {
 	display:inline-table;
