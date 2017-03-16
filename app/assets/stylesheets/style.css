@@ -434,7 +434,10 @@ min-height: 250px;
 }
 .tch-img img{
 	width:100%;
-	height: auto;
+	height: 100%;
+}
+.tch-img{
+	height:400px;
 }
 
 
