@@ -1,6 +1,6 @@
 <div class="coment-form">
   <h4>Leave your comment</h4>
-<%= simple_form_for(@music, @music.musiccomments.build) do |f| %>
+<%= simple_form_for(@music, @music.musiccomments.build(params[:music_id])) do |f| %>
 <div class="">
   <%=f.input :name, class: "form-control", placeholder: "Please enter your name" %>
 </div>
