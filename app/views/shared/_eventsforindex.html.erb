@@ -2,10 +2,8 @@
 <% @events.each do |event| %>
 
  <div class="tc-ch wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
-  <div class="col-md-12 col-sm-12 col-xs-12" >
     <div class="tch-img">
-      <%= image_tag event.thumbnail.url(:medium), class: "img-responsive" %>
-    </div>
+      <%= image_tag event.thumbnail.url(:medium), class: "img-responsive col-md-12 col-xs-12" %>
     </div>
     <h3><%= link_to event.title, event %></h3>
     <h6>Posted at <%= event.created_at.strftime("%b, %d, %y") %></h6>
