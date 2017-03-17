@@ -11,5 +11,6 @@ def destroy
   @musiccomment.destroy
 
   redirect_to music_path(@music)
+end
 
 end
