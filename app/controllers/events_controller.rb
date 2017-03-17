@@ -7,7 +7,6 @@ class EventsController < InheritedResources::Base
   end
 
   def show
-    @events = Event.all.order('created_at DESC').limit(4).offset(1)
   end
 
   def new
