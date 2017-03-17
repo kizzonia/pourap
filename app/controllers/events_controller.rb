@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   layout "bloggers", except:[:index, :show]
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :upvote, :downvote, :update, :destroy]
   def index
     @events = Event.all.order('created_at DESC')
 
@@ -39,6 +39,15 @@ class EventsController < ApplicationController
         redirect_to root_path
       end
 
+      def upvote
+        @event.upvote
+        redirect_to :back
+      end
+
+      def downvote
+        @event.downvote
+        redirect_to :back
+      end
 
 
   private

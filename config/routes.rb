@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :eventscomments
     member do
       put "like", to: "events#upvote"
-      put "dislike", to: "events#{downvote}"
+      put "dislike", to: "events#downvote"
     end
   end
   devise_for :bloggers
@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   resources :musics do
     resources :musiccomments
     member do
-      put "like", to: "musics#{upvote}"
-      put "dislike", to: "musics#{downvote}"
+      put "like", to: "musics#upvote"
+      put "dislike", to: "musics#downvote"
     end
     end
   root 'welcome#index'
