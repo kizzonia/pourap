@@ -1,5 +1,5 @@
 <div class= "coment-form">
-<%= simple_form_for([@event, @event.eventcomments.build(params[:event_id])]) do |f|%>
+<%= simple_form_for([@event, @event.eventscomments.build(params[:event_id])]) do |f|%>
 <div class="form-group">
   <%=f.input :name, class: "form-control", placeholder: "Please enter your name" %>
 </div>
