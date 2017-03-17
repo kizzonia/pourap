@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   resources :events do
     resources :eventscomments
+    member do
+      put "like", to: "events#upvote"
+      put "dislike", to: "events#{downvote}"
+    end
   end
   devise_for :bloggers
   resources :projects
@@ -15,6 +19,10 @@ Rails.application.routes.draw do
   resources :homes
   resources :musics do
     resources :musiccomments
+    member do
+      put "like", to: "musics#{upvote}"
+      put "dislike", to: "musics#{downvote}"
+    end
     end
   root 'welcome#index'
 
