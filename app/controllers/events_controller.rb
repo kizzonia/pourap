@@ -1,4 +1,4 @@
-class EventsController < InheritedResources::Base
+class EventsController < ApplicationController
   layout "bloggers", except:[:index, :show]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   def index
