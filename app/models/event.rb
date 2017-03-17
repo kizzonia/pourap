@@ -5,5 +5,5 @@ class Event < ApplicationRecord
 
 validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\z/
 
-has_many :eventcomments, dependent: :destroy
+has_many :eventscomments, dependent: :destroy
 end
