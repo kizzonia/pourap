@@ -3,7 +3,7 @@ class CreateMusiccomments < ActiveRecord::Migration[5.0]
     create_table :musiccomments do |t|
       t.string :name
       t.text :body
-      t.references :music, foreign_key: true
+      t.references :music, index: true, foreign_key: true
 
       t.timestamps
     end
