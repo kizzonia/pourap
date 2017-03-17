@@ -432,13 +432,10 @@ min-height: 250px;
     padding: 1em 0;
     text-align: left;
 }
-.tch-img{
-	min-width: 600px;
-	min-height: 500px;
-}
+
 .tch-img img {
 	width:100%;
-	height: auto;
+	height: 40%;
 }
 
 
