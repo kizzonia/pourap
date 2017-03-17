@@ -1,6 +1,6 @@
 class MusicsController < ApplicationController
   layout "bloggers", except: [:index, :show]
-  before_action :set_music, only:[:show, :edit, :update, :destroy]
+  before_action :set_music, only:[:show, :edit, :upvote, :downvote, :update, :destroy]
 
   def index
     @musics = Music.all.order("created_at DESC")
@@ -41,7 +41,15 @@ class MusicsController < ApplicationController
     redirect_to musics_url
   end
 
+  def upvote
+    @music.upvote
+    redirect_to :back
+  end
 
+  def downvote
+    @music.downvote
+    redirect_to :back
+  end
 
 
 
