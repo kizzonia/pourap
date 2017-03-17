@@ -432,8 +432,14 @@ min-height: 250px;
     padding: 1em 0;
     text-align: left;
 }
-
-
+.tch-img{
+	min-width: 600px;
+	min-height: 500px;
+}
+.tch-img img {
+	width:100%;
+	height: auto;
+}
 
 
 
@@ -1443,6 +1449,10 @@ ul.social-share {
     padding: 1.5em;
     margin: 2em 0;
 }
+.single img{
+	width:100%;
+	height: 100%;
+}
 ul.social-share li{
 list-style:none;
 display:inline-block;
@@ -1633,8 +1643,8 @@ p.reply i{
 }
 h5.top {
     color: #fbd14b;
-    font-size: 1.6em;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 200;
     margin: 0.8em 0;
 }
 .single {

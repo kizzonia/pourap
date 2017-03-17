@@ -3,22 +3,25 @@
 		<div class="col-md-9 technology-left">
 			<div class="agileinfo">
 
-		  <h2 class="w3"><%= @event.title %>GE</h2>
+		  <h2 class="w3"><%= @event.title %></h2>
 			<div class="single">
         <%= image_tag @event.thumbnail.url(:medium), class: "img-responsive " %>
 
 			    <div class="b-bottom">
-			      <h5 class="top">  <%= raw(@event.shortDescription) %>
+			      <h5 class="top"> Topic: <%= raw(@event.shortDescription) %>
               </h5>
-				   <p class="sub">  <%= raw(@event.description) %>.</p>
-           <p class="sub">   <%= @event.location %> </p>
-           <p class="sub">  <%= @event.eventDate %> </p>
-           <p class="sub">   <%= raw(@event.sponsors) %> </p>
+				   <p class="sub">Event Story: <%= raw(@event.description) %>.</p>
+           <p class="sub">Event Location: <%= @event.location %> </p>
+           <p class="sub"> Date: <%= @event.eventDate %> </p>
+           <p class="sub"> Sponsors: <%= raw(@event.sponsors) %> </p>
            <p class="sub"> Social handler @<%= @event.socialLink %> </p?
 
 
 				</div>
 			 </div>
+			 <%= render @event.eventcomments %>
+			 <%= render 'eventcomments/form' %>
+
      </div>
    </div>
  </div>

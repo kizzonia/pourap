@@ -1,12 +1,15 @@
+<div class= "coment-form">
 <%= simple_form for(@event, @event.eventcomments.build) do %>
-<div class="">
+<div class="form-group">
   <%=f.input :name, class: "form-control", placeholder: "Please enter your name" %>
 </div>
 
-<div class="">
+<div class="form-group">
   <%=f.input :body, class: "form-control", label: "Enter Your comments" %>
 </div>
-<div class="">
+<div class="form-group">
   <%= f.input :submit class: "bht1" %>
 </div>
 <% end %>
+
+</div>

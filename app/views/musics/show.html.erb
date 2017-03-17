@@ -5,13 +5,17 @@
 
         <h2 class="w3"><%= @music.songname %></h2>
         <div class="single">
-          <%= image_tag @music.albumimage.url(:medium) %>
+          <div class="col-md-12 col-sm-12" >
+          <%= image_tag @music.albumimage.url(:large), class: "img-responsive" %>
+        </div>
           <div class="b-bottom">
-            <h5 class="top"><%= raw(@music.subtitle) %></h5>
+            <h5 class="top">SubStory: <%= raw(@music.subtitle) %></h5>
+            <br>
             <p class="sub"><%= raw(@music.description) %>.</p>
           </div>
 
-
+          <br>
+          <br>
           <div class="content-container">
             <div id="jquery_jplayer_1" class="jp-jplayer"></div>
             <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -60,11 +64,16 @@
               </div>
             </div>
           </div>
+          <br>
+          <br>
           <div class="b-bottom">
-            <p class"sub" ><%= raw(@music.discography) %> </p>
-            <p class="sub"> <%= @music.published %> </p>
+            <p class"sub" >Discogrphy:<%= raw(@music.discography) %> </p>
+            <p class="sub"> Published At<%= @music.published %> </p>
           </div>
         </div>
+
+        <%= render @music.musiccomments %>
+        <%= render 'musiccomments/form' %>
       </div>
     </div>
   </div>

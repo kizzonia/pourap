@@ -12,5 +12,5 @@ content_type: [
   'audio/mp3'
 ]
 
-has_many :musiccomments
+has_many :musiccomments, dependent: :destroy
 end
