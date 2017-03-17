@@ -7,15 +7,13 @@
 								</a>
 							</div>
 							<div class="media-body response-text-right">
-                <p> <%= musiccomments.name %></p>
-								<p><%= musiccomments.body %></p>
+                <p> <%= eventscomment.name %></p>
+								<p><%= eventscomment.body %></p>
 									<ul>
-										<li>Jun 21, 2016</li>
+										<li>  on <%= time_ago_in_words(eventscomment.created_at) %>
+</li>
 									</ul>
 										</div>
 									</div>
 									<div class="clearfix"> </div>
 								</div>
-
-
-							<!-- technology-right -->

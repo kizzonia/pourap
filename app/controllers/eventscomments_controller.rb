@@ -3,7 +3,7 @@ class EventscommentsController < ApplicationController
     @event = Event.find(params[:event_id])
     @eventscomment = @event.eventscomments.create(params[:eventscomment].permit(:name, :body))
 
-    redirect_to events_path(@event)
+    redirect_to event_path(@event)
   end
   def destroy
   @event = Event.find(params[:event_id])

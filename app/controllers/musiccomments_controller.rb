@@ -2,7 +2,7 @@ class MusiccommentsController < ApplicationController
   def create
     @music = Music.find(params[:music_id])
     @musiccomment = @music.musiccomments.create(params[:musiccomment].permit(:name, :body))
-    redirect_to musics_path(@music)
+    redirect_to music_path(@music)
   end
 
 def destroy
