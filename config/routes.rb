@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :banners, except: [:show]
   mount Ckeditor::Engine => '/ckeditor'
   resources :events do
-    resources :eventcomments
+    resources :eventscomments
   end
   devise_for :bloggers
   resources :projects
