@@ -2,7 +2,7 @@
   <h4>Leave your comment</h4>
 
 
-<%= simple_form for(@music, @music.musiccomments.build) do %>
+<%= simple_form for(@music, @music.musiccomments.build) do |f| %>
 <div class="">
   <%=f.input :name, class: "form-control", placeholder: "Please enter your name" %>
 </div>
