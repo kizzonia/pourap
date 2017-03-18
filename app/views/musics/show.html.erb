@@ -75,9 +75,9 @@
         </div>
           <div class="soci">
             <ul>
-            <%= link_to like_music_path(music), method: :put do %>
+            <%= link_to like_music_path, method: :put do %>
             <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-up", class: "btn btn-default btn-sm" %>(<%= @music.get_upvotes.size %>)</li><% end %>
-            <%= link_to dislike_music_path(music), method: :put do %>
+            <%= link_to dislike_music_path, method: :put do %>
             <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-down", class: "btn btn-default btn-sm" %> (<%=@music.get_downvotes.size %>)</li><% end %>
           </ul>
         </div>
