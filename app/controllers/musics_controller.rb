@@ -59,11 +59,10 @@ class MusicsController < ApplicationController
 
   def download
       @music = Music.find(params[:id])
-      send_file Paperclip.io_adapters.for(@music.song_file).path,
-        :filename => @music.song_file_file_name,
-        :type => @music.song_file_content_type,
+        :type => file.content_type,
         :disposition => 'attachment',
         :x_sendfile => true
+        data = open(music.song_url)
   end
 
 
