@@ -42,12 +42,14 @@ class MusicsController < ApplicationController
   end
 
   def upvote
-    @music.upvote
+    @music = Music.find(params[:id])
+    @music.likes
     redirect_to :back
   end
 
   def downvote
-    @music.downvote
+    @music = Music.find(params[:id])
+    @music.dislikes
     redirect_to :back
   end
 
