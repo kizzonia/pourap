@@ -49,11 +49,7 @@
                   </div>
                 </div>
 
-                <div class="jp-playlist">
-                  <ul>
-                    <li>&nbsp;</li>
-                  </ul>
-                </div>
+
 
                 <!-- FlashPlayer Fallback-->
                 <div class="jp-no-solution">
@@ -71,7 +67,14 @@
             <p class="sub"> Published At<%= @music.published %> </p>
           </div>
         </div>
-
+          <div class="soci">
+            <ul>
+            <%= link_to like_music_path(music), method: :put do %>
+            <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-up", class: "btn btn-default btn-sm" %>(<%= @music.get_upvotes.size %>)</li><% end %>
+            <%= link_to dislike_music_path(music), method: :put do %>
+            <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-down", class: "btn btn-default btn-sm" %> (<%=@music.get_downvotes.size %>)</li><% end %>
+          </ul>
+        </div>
         <%= render @music.musiccomments %>
         <%= render 'musiccomments/form' %>
       </div>

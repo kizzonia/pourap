@@ -40,14 +40,21 @@ class EventsController < ApplicationController
       end
 
       def upvote
-        @event.upvote
+        @event = event.find(params[:id])
+        session[:voting_id] = request.remote_ip
+        voter = Session.find_or_create_by(ip: session[:voting_id])
+        voter.likes @event
         redirect_to :back
       end
 
       def downvote
-        @event.downvote
+        @event = event.find(params[:id])
+        session[:voting_id] = request.remote_ip
+      voter = Session.find_or_create_by(ip: session[:voting_id])
+      voter.dislikes @event
         redirect_to :back
       end
+
 
 
   private

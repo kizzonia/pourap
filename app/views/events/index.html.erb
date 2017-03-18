@@ -33,6 +33,10 @@
 
 						<div class="soci">
 							<ul>
+								<%= link_to like_event_path(event), method: :put do %>
+								<li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-up", class: "btn btn-default btn-sm" %>Like(<%= event.get_upvotes.size %>)</li><% end %>
+								<%= link_to dislike_event_path(event), method: :put do %>
+								<li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-down", class: "btn btn-default btn-sm" %> Dislike(<%=event.get_downvotes.size %>)</li><% end %>
 								<li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
 								<li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
 								<li class="hvr-rectangle-out"><a class="goog" href="#"></a></li>
