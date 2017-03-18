@@ -59,10 +59,11 @@ class MusicsController < ApplicationController
 
   def download
       @music = Music.find(params[:id])
-        :type => file.content_type,
         :disposition => 'attachment',
-        :x_sendfile => true
-        data = open(music.song_url)
+        :x_sendfile => true,
+        data = open(music.song_url),
+        send_data data.read,
+        :type => data.content_type
   end
 
 
