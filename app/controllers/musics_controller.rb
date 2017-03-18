@@ -59,10 +59,9 @@ class MusicsController < ApplicationController
 
   def download
       @music = Music.find(params[:id])
-        data = open(@music)
-        send_data data.read,
             x_sendfile: true,
-        type: data.content_type
+        extension = File.extname(@music.song_file_name)
+ send_data open("#{@music.song.expiring_url(10000, :original)}").read, filename: "original_#{@music.id}#{extension}", type: @music.song_content_type
   end
 
 
