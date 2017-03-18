@@ -6,7 +6,7 @@
         <h2 class="w3"><%= @music.songname %></h2>
         <div class="single">
           <div class="col-md-12 col-sm-12" >
-          <%= image_tag @music.albumimage.url(:large), class: "img-responsive" %>
+          <%= image_tag @music.albumimage.url(:medium), class: "img-responsive" %>
         </div>
           <div class="b-bottom">
             <h5 class="top">SubStory: <%= raw(@music.subtitle) %></h5>
