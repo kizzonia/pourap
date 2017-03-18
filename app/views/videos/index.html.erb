@@ -3,9 +3,9 @@
     <div class="col-md-9 technology-left">
       <div class="gallery" id="gallery">
 
-        <div class="gallery-grids">
+        <div class="gallery-grids col-md-12">
           <% @videos.each do |video| %>
-          <div class="gallery-grid">
+          <div class="col-md-6">
 
                 <div class="tch-img-video">
                   <%= link_to "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' do %>
