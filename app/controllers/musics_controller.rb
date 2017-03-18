@@ -59,7 +59,7 @@ class MusicsController < ApplicationController
 
   def download
       @music = Music.find(params[:id])
-        data = open(@music.song_url)
+        data = open(@music)
         send_data data.read,
             x_sendfile: true,
         type: data.content_type
