@@ -40,7 +40,7 @@ class EventsController < ApplicationController
       end
 
       def upvote
-        @event = event.find(params[:id])
+        @event = Event.find(params[:id])
         session[:voting_id] = request.remote_ip
         voter = Session.find_or_create_by(ip: session[:voting_id])
         voter.likes @event
@@ -48,7 +48,7 @@ class EventsController < ApplicationController
       end
 
       def downvote
-        @event = event.find(params[:id])
+        @event = Event.find(params[:id])
         session[:voting_id] = request.remote_ip
       voter = Session.find_or_create_by(ip: session[:voting_id])
       voter.dislikes @event
