@@ -44,7 +44,7 @@ class MusicsController < ApplicationController
   def upvote
     @music = Music.find(params[:id])
     session[:voting_id] = request.remote_ip
-    voter = Session.find_or_create_by_ip(session[:voting_id])
+    voter = Session.find_or_create_by(ip: session[:voting_id])
     voter.likes @music
     redirect_to :back
   end
@@ -52,7 +52,7 @@ class MusicsController < ApplicationController
   def downvote
     @music = Music.find(params[:id])
     session[:voting_id] = request.remote_ip
-  voter = Session.find_or_create_by(session[:voting_id])
+  voter = Session.find_or_create_by(ip: session[:voting_id])
   voter.dislikes @music
     redirect_to :back
   end
