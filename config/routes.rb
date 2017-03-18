@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     member do
       put "like", to: "events#upvote"
       put "dislike", to: "events#downvote"
-      get :download
+
     end
   end
   devise_for :bloggers
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     member do
       put "like", to: "musics#upvote"
       put "dislike", to: "musics#downvote"
+      get :download
     end
     end
   root 'welcome#index'
