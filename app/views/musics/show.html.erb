@@ -61,7 +61,7 @@
             </div>
             <div class="text-center col-md-12">
               <div class="col-md-6 col-md-offset-3">
-                <%= button_to "Download", download_music_path(music), :method => :get, class: "btn btn-lg bht1" %>
+                <%= button_to "Download", download_music_path(@music.song.url), :method => :get, class: "btn btn-lg bht1" %>
               </div>
             </div>
 
