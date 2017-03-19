@@ -5,24 +5,23 @@
 
         <h2 class="w3"><%= @video.title %></h2>
         <div class="single">
-          <div id="player-wrapper"></div>
-          <div class="col-md-6">
+
+          <div class="col-md-12">
+            <div id="player-wrapper"></div>
             <div class="yt_video thumbnail">
               <%= image_tag "https://img.youtube.com/vi/#{@video.uid}/mqdefault.jpg", alt: @video.title,
               class: 'yt_preview img-rounded', :"data-uid" => @video.uid %>
 
-              <div class="caption">
-                <h5><%= @video.title %></h5>
 
-              </div>
             </div>
+          </div>
             <div class="b-bottom">
               <h5 class="top">SubStory: <%= raw(@video.description) %></h5>
               <br>
               <p class="sub"><%= raw(@video.story) %>.</p>
             </div>
 
-          </div>
+
         </div>
       </div>
       <br>
@@ -42,3 +41,5 @@
     </div>
   </div>
 </div>
+<script src="https://www.google.com/jsapi"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
