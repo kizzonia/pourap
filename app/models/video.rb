@@ -6,6 +6,7 @@ class Video < ApplicationRecord
 before_create -> do
   uid = link.match(YT_LINK_FORMAT)
   self.uid = uid[2] if uid && uid[2]
+  get_additional_info
 
   if self.uid.to_s.length != 11
     self.errors.add(:link, 'is invalid.')
