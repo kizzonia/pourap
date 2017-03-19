@@ -1,28 +1,33 @@
-
-<div class="w3ls">
-  <% @videos.each do |video| %>
-  <div class="col-md-6 w3ls-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
-     <div class="tc-ch">
-      <div class="tch-img-video">
-        <%= link_to "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' do %>
-        <%= image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
-        class: ' img-responsive ') %>
-          <span><%= fa_icon "youtube-play 3x", class: "text-center play" %></span>
-          <%end%>
-      </div>
-      <h3><%= video.title %></h3>
-        <div class="bht1">
-          <%= link_to "Watch On Youtube ", "https://www.youtube.com/watch?v=#{video.uid}" %>
+<div class="technology">
+  <div class="container">
+    <div class=" col-md-9 technology-left" >
+      <div class="w3ls">
+        <% @videos.each do |video| %>
+        <div class="col-md-6 w3ls-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+          <div class="tc-ch">
+            <div class="tch-img-video">
+              <%= link_to "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' do %>
+              <%= image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+              class: ' img-responsive ') %>
+              <span><%= fa_icon "youtube-play 3x", class: "text-center play" %></span>
+              <%end%>
+            </div>
+            <h3><%= video.title %></h3>
+            <div class="bht1">
+              <%= link_to "Watch On Youtube ", "https://www.youtube.com/watch?v=#{video.uid}" %>
+            </div>
+            <div class="soci">
+              <ul>
+                <li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
         </div>
-        <div class="soci">
-          <ul>
-            <li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
-          </ul>
-        </div>
+        <% end %>
         <div class="clearfix"></div>
+
+      </div>
     </div>
   </div>
-  <% end %>
-  <div class="clearfix"></div>
-
 </div>
