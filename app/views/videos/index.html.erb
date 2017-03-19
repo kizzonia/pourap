@@ -17,7 +17,7 @@
 
             <div class="bht1">
               <%= link_to "Watch On Youtube ", "https://www.youtube.com/watch?v=#{video.uid}" %>
-              <%= link_to 'Remove', video_path(@video), method: :delete, data: { confirm: 'Are you sure?' }  %>
+              <%= link_to 'Remove', video_path(@video.uid), method: :delete, data: { confirm: 'Are you sure?' }  %>
 
             </div>
             <div class="soci">
