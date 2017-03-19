@@ -9,9 +9,11 @@
           <div class="col-md-12">
             <div id="player-wrapper"></div>
             <div class="yt_video thumbnail">
-              <%= image_tag "https://img.youtube.com/vi/#{@video.uid}/mqdefault.jpg", alt: @video.title,
-              class: 'yt_preview img-rounded', :"data-uid" => @video.uid %>
-
+              <%= link_to "https://img.youtube.com/vi/#{video.uid}", target: '_blank' do %>
+              <%= image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+              class: ' img-responsive ') %>
+              <span><%= fa_icon "youtube-play 3x", class: "text-center play" %></span>
+              <%end%>
 
             </div>
           </div>
