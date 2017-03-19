@@ -6,7 +6,17 @@
         <h2 class="w3"><%= @video.title %></h2>
         <div class="single">
           <div id="player-wrapper"></div>
+          <div class="col-md-6">
+        <div class="yt_video thumbnail">
+          <%= image_tag "https://img.youtube.com/vi/#{@video.uid}/mqdefault.jpg", alt: @video.title,
+                        class: 'yt_preview img-rounded', :"data-uid" => @video.uid %>
 
+          <div class="caption">
+            <h5><%= @video.title %></h5>
+            <p>Duration: <b><%= @video.duration %></b></p>
+
+          </div>
+        </div>
           <div class="b-bottom">
             <h5 class="top">SubStory: <%= raw(@video.description) %></h5>
             <br>
