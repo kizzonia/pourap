@@ -5,11 +5,16 @@
 
         <h2 class="w3"><%= @video.title %></h2>
         <div class="single">
-
+          <div class="b-bottom">
+            <h5 class="top">SubStory: <%= raw(@video.description) %></h5>
+            <br>
+            <p class="sub"><%= raw(@video.story) %>.</p>
+          </div>
+          <div class="col-md-12">
           <div class="content-container">
+            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
             <div id="jp_container_1" class="jp-video jp-video-360p" role="application" aria-label="media player">
               <div class="jp-type-single">
-                <div id="jquery_jplayer_1" class="jp-jplayer"></div>
                 <div class="jp-gui">
                   <div class="jp-video-play">
                     <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
@@ -52,16 +57,12 @@
             </div>
           </div>
 
-
+        </div>
         </div>
         <br>
 
         <br>
-        <div class="b-bottom">
-          <h5 class="top">SubStory: <%= raw(@video.description) %></h5>
-          <br>
-          <p class="sub"><%= raw(@video.story) %>.</p>
-        </div>
+
       </div>
       <div class="soci">
         <ul>
