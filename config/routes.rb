@@ -16,7 +16,12 @@ Rails.application.routes.draw do
   resources :projects
   resources :abouts
   resources :bloggers
-  resources :videos
+  resources :videos do
+    member do
+      put "like", to: "videos#upvote"
+      put "dislike", to: "videos#downvote"
+    end
+  end
   resources :homes
   resources :musics do
     resources :musiccomments
