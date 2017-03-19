@@ -95,11 +95,11 @@ $(document).ready(function(){
 		ready: function () {
 			$(this).jPlayer("setMedia", {
 				title: "<%= @video.title %>",
-        mp4: "<%= link_to "https://www.youtube.com/watch?v=#{video.uid}" %>",
-				m4v: "<%= link_to "https://www.youtube.com/watch?v=#{video.uid}" %>",
-				ogv: "<%= link_to "https://www.youtube.com/watch?v=#{video.uid}" %>",
-				webmv: "<%= link_to "https://www.youtube.com/watch?v=#{video.uid}" %>",
-				poster: "  <%= image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+        mp4: "<%= link_to "https://www.youtube.com/watch?v=#{@video.uid}" %>",
+				m4v: "<%= link_to "https://www.youtube.com/watch?v=#{@video.uid}" %>",
+				ogv: "<%= link_to "https://www.youtube.com/watch?v=#{@video.uid}" %>",
+				webmv: "<%= link_to "https://www.youtube.com/watch?v=#{@video.uid}" %>",
+				poster: "  <%= image_tag("https://img.youtube.com/vi/#{@video.uid}/mqdefault.jpg", alt: @video.title,
           class: ' img-responsive ') %>"
 			});
 		},
