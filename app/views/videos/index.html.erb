@@ -2,16 +2,14 @@
   <div class="container">
     <div class="col-md-9 technology-left">
       <div class="blog">
-
         <div class="col-md-12">
           <% @videos.each do |video| %>
-          <div class="col-md-6">
-
+          <div class="col-md-4">
                 <div class="tch-img-video">
                   <%= link_to "https://www.youtube.com/watch?v=#{video.uid}", target: '_blank' do %>
                   <%= image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
-                  class: ' img-responsive b-pourap ') %>
-                    <span class"play"><%= fa_icon "youtube-play 3x", class: "play " %></span>
+                  class: ' img-responsive') %>
+                    <span ><%= fa_icon "youtube-play 3x", class: "play " %></span>
                     <%end%>
                   </div>
                   <h3><%= video.title %></h3>
@@ -33,7 +31,3 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- end start side bar -->
-  </div>
