@@ -53,11 +53,19 @@ label{
 	margin-left: 135px;
 
 }
+
 .play2 {
 	color:#E53A40;
 	position:absolute;
 	top: 80px;
 	margin-left: 145px;
+
+}
+.play3 {
+	color:#E53A40;
+	position:absolute;
+	top: 150px;
+	margin-left: 185px;
 
 }
 .play i{

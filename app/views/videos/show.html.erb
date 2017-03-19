@@ -10,24 +10,19 @@
 
               <%= link_to "https://img.youtube.com/vi/#{@video.uid}", target: '_blank' do %>
               <%= image_tag("https://img.youtube.com/vi/#{@video.uid}/mqdefault.jpg", alt: @video.title,
-              class: ' img-responsive ') %>
-              <span class="col-md-3 col-md-offset-6"><%= fa_icon "youtube-play 3x", class: "text-center play3" %></span>
+              class: ' img-responsive ') do %>
+              <span><%= fa_icon "youtube-play 3x", class: "text-center play3" %></span>
               <%end%>
-
+              <% end %>
             </div>
-          </div>
+
             <div class="b-bottom">
               <h5 class="top">SubStory: <%= raw(@video.description) %></h5>
               <br>
               <p class="sub"><%= raw(@video.story) %>.</p>
             </div>
 
-
-        </div>
-
-      <br>
-
-      <br>
+              </div>
 
 
       <div class="soci">
@@ -38,9 +33,7 @@
           <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-down", class: "btn btn-default btn-sm" %> (<%=@video.get_downvotes.size %>)</li><% end %>
         </ul>
       </div>
-
     </div>
   </div>
-</div>
-<script src="https://www.google.com/jsapi"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
+    </div>
+  </div>
