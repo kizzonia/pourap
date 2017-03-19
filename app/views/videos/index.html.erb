@@ -10,13 +10,14 @@
               <%= image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
               class: ' img-responsive ') %>
               <span><%= fa_icon "youtube-play 3x", class: "text-center play" %></span>
-              <span>    <h4><%= video.title %></h4></span
               <%end%>
             </div>
+            <span>    <h4><%= video.title %></h4></span>
+
 
             <div class="bht1">
               <%= link_to "Watch On Youtube ", "https://www.youtube.com/watch?v=#{video.uid}" %>
-              <p><%= link_to 'Delete', video_path(video.uid), method: :delete, class: "btn btn-xs btn-default", data: { confirm: 'Are you sure?' }  %>
+              <%= link_to 'Remove', video_path(video.uid), method: :delete, data: { confirm: 'Are you sure?' }  %>
 
             </div>
             <div class="soci">

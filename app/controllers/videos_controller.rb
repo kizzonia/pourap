@@ -31,7 +31,7 @@ end
 
   private
   def set_about
-    @video = Video.find(params[:id][:link][:video])
+    @video = Video.find(params[:id][:link])
   end
 
 
