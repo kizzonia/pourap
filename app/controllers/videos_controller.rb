@@ -4,8 +4,8 @@ class VideosController < ApplicationController
   def index
     @videos = Video.all.order('created_at DESC')
     @abouts = About.all
-     @videos = Video.highest_voted.limit(10)
-     @musics = Music.highest_voted.limit(10)
+     @videos = Video.highest_voted.all.order('created_at DESC').limit(10)
+     @musics = Music.highest_voted.all.order('created_at DESC').limit(10)
 
   end
 
