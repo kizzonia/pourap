@@ -1,8 +1,8 @@
 class Music < ApplicationRecord
   acts_as_votable
 
-  def self.highest_voted
-    
+  def highest_voted
+
   end
 
   has_attached_file :albumimage, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
