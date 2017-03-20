@@ -57,6 +57,10 @@ class MusicsController < ApplicationController
     redirect_to :back
   end
 
+  def self.highest_voted
+    self.order("cached_votes_score DESC")
+  end
+
   def download
       @music = Music.find(params[:id])
 

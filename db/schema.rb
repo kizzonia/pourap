@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318004839) do
+ActiveRecord::Schema.define(version: 20170320131749) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "name"
@@ -123,8 +123,8 @@ ActiveRecord::Schema.define(version: 20170318004839) do
     t.text     "discography"
     t.datetime "published"
     t.text     "subtitle"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "albumimage_file_name"
     t.string   "albumimage_content_type"
     t.integer  "albumimage_file_size"
@@ -133,6 +133,14 @@ ActiveRecord::Schema.define(version: 20170318004839) do
     t.string   "song_content_type"
     t.integer  "song_file_size"
     t.datetime "song_updated_at"
+    t.integer  "cached_votes_total",      default: 0
+    t.integer  "cached_votes_score",      default: 0
+    t.integer  "cached_votes_up",         default: 0
+    t.integer  "cached_votes_down",       default: 0
+    t.index ["cached_votes_down"], name: "index_musics_on_cached_votes_down"
+    t.index ["cached_votes_score"], name: "index_musics_on_cached_votes_score"
+    t.index ["cached_votes_total"], name: "index_musics_on_cached_votes_total"
+    t.index ["cached_votes_up"], name: "index_musics_on_cached_votes_up"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -164,10 +172,18 @@ ActiveRecord::Schema.define(version: 20170318004839) do
     t.integer  "likes"
     t.integer  "dislikes"
     t.string   "uid"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.text     "description"
     t.text     "story"
+    t.integer  "cached_votes_total", default: 0
+    t.integer  "cached_votes_score", default: 0
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "cached_votes_down",  default: 0
+    t.index ["cached_votes_down"], name: "index_videos_on_cached_votes_down"
+    t.index ["cached_votes_score"], name: "index_videos_on_cached_votes_score"
+    t.index ["cached_votes_total"], name: "index_videos_on_cached_votes_total"
+    t.index ["cached_votes_up"], name: "index_videos_on_cached_votes_up"
     t.index ["uid"], name: "index_videos_on_uid"
   end
 

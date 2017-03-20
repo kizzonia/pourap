@@ -44,6 +44,10 @@ voter.dislikes @video
   redirect_to :back
 end
 
+def self.highest_voted
+    self.order("cached_votes_score DESC")
+  end
+
   private
   def set_about
     @video = Video.find(params[:id])
