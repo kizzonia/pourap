@@ -5,7 +5,7 @@ class VideosController < ApplicationController
     @videos = Video.all.order('created_at DESC')
     @abouts = About.all
      @videos = Video.highest_voted.limit(10)
-     @musics = Music.highest_voted.all.limit(10)
+     @musics = Music.highest_voted.limit(10)
 
   end
 
