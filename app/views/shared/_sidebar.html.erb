@@ -8,11 +8,11 @@
 				</form>
 			</div>
 			<h4>Top Ten Singles </h4>
-			<%= @musics.highest_voted.each do |music| %>
+			<%= @musics.highest_voted.each do |m| %>
 			<div class="blog-grids">
 				<div class="blog-grid-left">
 					<%= link_to music do %>
-						<%= image_tag music.albumimage.url(:medium), class: "img-responsive" %>
+						<%= image_tag m.albumimage.url(:medium), class: "img-responsive" %>
 						<% end %>
 				</div>
 				<div class="blog-grid-right">
@@ -25,9 +25,9 @@
 			<div class="insta">
 				<h4>Top Videos</h4>
 				<ul>
-					<%= @videos.highest_voted.each do |video| %>
-						<li><%= link_to video, target: '_blank' do %>
-						<%= image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+					<%= @videos.highest_voted.each do |v| %>
+						<li><%= link_to v, target: '_blank' do %>
+						<%= image_tag("https://img.youtube.com/vi/#{v.uid}/mqdefault.jpg", alt: v.title,
 						class: ' img-responsive ') %>
 						<span><%= fa_icon "youtube-play ", class: "text-center" %></span>
 						<%end%></li>
