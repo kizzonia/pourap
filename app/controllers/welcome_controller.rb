@@ -5,5 +5,8 @@ class WelcomeController < ApplicationController
     @musics = Music.all.order('created_at DESC')
     @abouts = About.all
     @banners = Banner.all.order('created_at DESC').limit(1)
+    @musics = Music.highest_voted.all.limit(10)
+    @videos = Video.highest_voted.all.limit(10)
+
   end
 end
