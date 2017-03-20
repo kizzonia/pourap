@@ -11,7 +11,7 @@
 			<%= @musics.highest_voted.each do |m| %>
 			<div class="blog-grids">
 				<div class="blog-grid-left">
-					<%= link_to music do %>
+					<%= link_to m do %>
 						<%= image_tag m.albumimage.url(:medium), class: "img-responsive" %>
 						<% end %>
 				</div>
@@ -25,7 +25,7 @@
 			<div class="insta">
 				<h4>Top Videos</h4>
 				<ul>
-					<%= @videos = Video.highest_voted.each do |v| %>
+					<%= @videos = Video.highest_voted.all do |v| %>
 						<li><%= link_to v, target: '_blank' do %>
 						<%= image_tag("https://img.youtube.com/vi/#{v.uid}/mqdefault.jpg", alt: v.title,
 						class: ' img-responsive ') %>
