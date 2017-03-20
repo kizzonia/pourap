@@ -8,7 +8,7 @@
 				</form>
 			</div>
 			<h4>Top Ten Singles </h4>
-			<%= @musics.highest_voted.each do |music| %>
+			<%= @musics.highest_voted do |music| %>
 			<div class="blog-grids">
 				<div class="blog-grid-left">
 					<%= link_to music do %>
@@ -23,18 +23,16 @@
 			</div>
 			<% end %>
 			<div class="insta">
-				<h4>Instagram</h4>
+				<h4>Top Videos</h4>
 				<ul>
+					<%= @videos.highest_voted do |video| %>
+						<li><%= link_to video, target: '_blank' do %>
+						<%= image_tag("https://img.youtube.com/vi/#{video.uid}/mqdefault.jpg", alt: video.title,
+						class: ' img-responsive ') %>
+						<span><%= fa_icon "youtube-play ", class: "text-center" %></span>
+						<%end%></li>
+						<% end%>
 
-					<li><a href="singlepage.html"><img src="images/t1.jpg" class="img-responsive" alt=""></a></li>
-					<li><a href="singlepage.html"><img src="images/m1.jpg" class="img-responsive" alt=""></a></li>
-					<li><a href="singlepage.html"><img src="images/f1.jpg" class="img-responsive" alt=""></a></li>
-					<li><a href="singlepage.html"><img src="images/m2.jpg" class="img-responsive" alt=""></a></li>
-					<li><a href="singlepage.html"><img src="images/f2.jpg" class="img-responsive" alt=""></a></li>
-					<li><a href="singlepage.html"><img src="images/t2.jpg" class="img-responsive" alt=""></a></li>
-					<li><a href="singlepage.html"><img src="images/f3.jpg" class="img-responsive" alt=""></a></li>
-					<li><a href="singlepage.html"><img src="images/t3.jpg" class="img-responsive" alt=""></a></li>
-					<li><a href="singlepage.html"><img src="images/m3.jpg" class="img-responsive" alt=""></a></li>
 				</ul>
 			</div>
 
