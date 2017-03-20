@@ -1,5 +1,8 @@
 class Video < ApplicationRecord
   acts_as_votable
+  def self.highest_voted
+    self.order("cached_votes_score DESC")
+  end
   
   YT_LINK_FORMAT = /\A.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/i
 

@@ -4,7 +4,7 @@ class VideosController < ApplicationController
   def index
     @videos = Video.all.order('created_at DESC')
     @abouts = About.all
-
+     @videos = Video.highest_voted.limit(10)
   end
 
 def show
@@ -44,9 +44,6 @@ voter.dislikes @video
   redirect_to :back
 end
 
-def self.highest_voted
-    self.order("cached_votes_score DESC")
-  end
 
   private
   def set_about
