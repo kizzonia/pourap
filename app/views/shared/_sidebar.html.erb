@@ -8,7 +8,7 @@
 				</form>
 			</div>
 			<h4>Top Ten Singles </h4>
-			<%= @musics.highest_voted.each do |m| %>
+			<%= @musics = Music.highest_voted.limit(10) do |m| %>
 			<div class="blog-grids">
 				<div class="blog-grid-left">
 					<%= link_to m do %>
