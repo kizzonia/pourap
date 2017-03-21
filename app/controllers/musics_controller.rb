@@ -10,7 +10,8 @@ class MusicsController < ApplicationController
   end
 
   def show
-    @musics = Music.highest_voted.limit(10)
+    @videos = Video.highest_voted.all.limit(10)
+    @musics = Music.highest_voted.all.limit(10)
 
   end
 
