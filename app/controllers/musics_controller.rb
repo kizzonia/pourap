@@ -4,13 +4,11 @@ class MusicsController < ApplicationController
 
   def index
     @musics = Music.all.order("created_at DESC")
-     @musics = Music.highest_voted.limit(10)
+    voted = Music.highest_voted.limit(10)
      @videos = Video.highest_voted.limit(10)
 
   end
-  def self.highest_voted
-    self.all.order("cached_votes_score DESC")
-  end
+
   def show
   end
 
