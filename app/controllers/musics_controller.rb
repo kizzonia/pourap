@@ -8,7 +8,9 @@ class MusicsController < ApplicationController
      @videos = Video.highest_voted.limit(10)
 
   end
-
+  def self.highest_voted
+    self.all.order("cached_votes_score DESC")
+  end
   def show
   end
 

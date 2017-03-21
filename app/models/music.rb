@@ -1,9 +1,7 @@
 class Music < ApplicationRecord
   acts_as_votable
 
-  def self.highest_voted
-    self.all.order("cached_votes_score DESC")
-  end
+
 
   has_attached_file :albumimage, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
 validates_attachment_content_type :albumimage, content_type: /\Aimage\/.*\z/
