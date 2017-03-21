@@ -1,8 +1,5 @@
 class Music < ApplicationRecord
   acts_as_votable
-  def self.highest_voted
-    self.all.order("cached_votes_score DESC")
-  end
 
 
   has_attached_file :albumimage, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
@@ -19,5 +16,8 @@ content_type: [
 ]
 
 has_many :musiccomments, dependent: :destroy
+def self.highest_voted
+  Music.order("cached_votes_score DESC")
+end
 
 end
