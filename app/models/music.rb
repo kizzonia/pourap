@@ -17,7 +17,7 @@ content_type: [
 
 has_many :musiccomments, dependent: :destroy
 def self.highest_voted
-  Music.order("cached_votes_score DESC")
+  self.order("cached_votes_score")
 end
 
 end
