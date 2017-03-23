@@ -83,33 +83,7 @@
                 <%= fa_icon "trash-o", class: "btn-sm" %>
               </li>
 
-                      <script type="text/javascript">
-                      //<![CDATA[
-                      $(document).ready(function(){
 
-                        $("#jquery_jplayer_1").jPlayer({
-                          ready: function (event) {
-                            $(this).jPlayer("setMedia", {
-                              title: "<%= music.songname %>",
-                              mp3: "<%= music.song.url %>",
-                              m4a: "<%= music.song.url %>",
-                              oga: "<%= music.song.url %>"
-
-                            });
-                          },
-                          swfPath: "/js",
-                          supplied: "m4a, mp3",
-                          wmode: "window",
-                          useStateClassSkin: true,
-                          autoBlur: false,
-                          smoothPlayBar: true,
-                          keyEnabled: true,
-                          remainingDuration: true,
-                          toggleDuration: true
-                        });
-                      });
-                      //]]>
-                      </script>
 
                 <% end %>
               </li>
@@ -124,3 +98,32 @@
   <%= render "shared/sidebar" %>
 </div>
 </div>
+<% @music.each do |music| %>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+  $("#jquery_jplayer_1").jPlayer({
+    ready: function (event) {
+      $(this).jPlayer("setMedia", {
+        title: "<%= music.songname %>",
+        mp3: "<%= music.song.url %>",
+        m4a: "<%= music.song.url %>",
+        oga: "<%= music.song.url %>"
+
+      });
+    },
+    swfPath: "/js",
+    supplied: "m4a, mp3",
+    wmode: "window",
+    useStateClassSkin: true,
+    autoBlur: false,
+    smoothPlayBar: true,
+    keyEnabled: true,
+    remainingDuration: true,
+    toggleDuration: true
+  });
+});
+//]]>
+</script>
+<% end %>
