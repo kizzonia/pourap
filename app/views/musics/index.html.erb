@@ -1,13 +1,15 @@
 <div class="banner-1">
   <div class="container">
     <div class="col-md-12">
-      <%= form_tag search_musics_path, class: "wrapper top", method: :get, role: "search" do  %>
+      <div class="wrapper">
+      <%= form_tag search_musics_path, method: :get, role: "search" do  %>
         <%=text_field_tag :search, params[:search], class: "search1", placeholder: "Search", id: "search" %>
         <%=submit_tag "search", name:nil, label: false,  class: "submit1"  %>
         <% end %>
       </div>
       </div>
     </div>
+  </div>
 
 <div class="technology">
 <div class="container">
