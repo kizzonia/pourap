@@ -359,7 +359,7 @@ background-size:cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
-min-height: 250px;
+min-height: 350px;
 }
 .banner-2{
 	background-image: url("../assets/12.jpg");
@@ -368,7 +368,7 @@ background-size:cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
-min-height: 250px;
+min-height: 350px;
 }
 .baner-3{
 	background-image: url("../assets/event.jpg");
@@ -377,7 +377,7 @@ background-size:cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
-min-height: 250px;
+min-height: 350px;
 
 }
  .b-pourap{
