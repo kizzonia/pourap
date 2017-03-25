@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   devise_for :bloggers
   resources :projects
   resources :abouts
-  resources :bloggers only: [:index]
+  resources :bloggers, only: [:index]
   resources :videos do
     collection do
       get 'search'
