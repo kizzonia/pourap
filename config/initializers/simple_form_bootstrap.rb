@@ -13,7 +13,7 @@ SimpleForm.setup do |config|
     b.optional :min_max
     b.optional :readonly
     b.use :label, class: 'control-label'
-    b.use :icon # enable the icon example from below
+
     b.use :input, class: 'form-control'
     b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
     b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
@@ -26,7 +26,7 @@ SimpleForm.setup do |config|
     b.optional :minlength
     b.optional :readonly
     b.use :label, class: 'control-label'
-    b.use :icon
+
     b.use :input
     b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
     b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
@@ -60,7 +60,6 @@ SimpleForm.setup do |config|
     b.optional :minlength
     b.optional :pattern
     b.optional :min_max
-    b.use :icon
     b.optional :readonly
     b.use :label, class: 'col-sm-3 control-label'
 
@@ -68,7 +67,6 @@ SimpleForm.setup do |config|
       ba.use :input, class: 'form-control'
       ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
       ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
-      ba.use :icon
     end
   end
 
