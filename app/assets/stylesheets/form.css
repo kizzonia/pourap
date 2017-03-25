@@ -14,7 +14,7 @@
           transform: translateY(-50%);
 }
 
-.search {
+.search1 {
   padding: 0 30px;
   font-size: 18px;
   width: 60%;
@@ -24,7 +24,7 @@
   border-radius: 20px 0 0 20px;
 }
 
-.submit {
+.submit1 {
   cursor: pointer;
   border: none;
   background: url("http://thesuiteworld.com/wp-admin/maint/search-icon-white-png-540.png") no-repeat center center, #fbd14b;
