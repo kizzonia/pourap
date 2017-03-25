@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <%= simple_form_for search_musics_path, class: "wrapper top", method: :get, role: "search" do |f| %>
         <%=f.input :search, class: "search1", placeholder: "Search", label: false, id: "search" %>
-        <%=f.button :search, name:nil, label: false,  class: "submit1 btn btn-lg"  %>
+        <%=f.submit :search, name:nil, label: false,  class: "submit1 btn btn-lg"  %>
         <% end %>
       </div>
       </div>
