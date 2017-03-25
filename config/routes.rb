@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-resources :facts
+  resources :facts
 
   resources :banners, except: [:show]
   mount Ckeditor::Engine => '/ckeditor'
