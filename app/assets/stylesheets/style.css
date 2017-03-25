@@ -353,12 +353,32 @@ height: 380px;
 }
 
 .banner-1{
+	background-image: url("../assets/7.jpg");
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
 min-height: 250px;
+}
+.banner-2{
+	background-image: url("../assets/12.jpg");
+background-size:cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+-ms-background-size: cover;
+-moz-background-size: cover;
+min-height: 250px;
+}
+.baner-3{
+	background-image: url("../assets/event.jpg");
+background-size:cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+-ms-background-size: cover;
+-moz-background-size: cover;
+min-height: 250px;
+
 }
  .b-pourap{
 	 height:200px;

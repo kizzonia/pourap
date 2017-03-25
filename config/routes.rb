@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :banners, except: [:show]
   mount Ckeditor::Engine => '/ckeditor'
   resources :events do
+    collection do
+      get 'search'
+    end
     resources :eventscomments
     member do
       put "like", to: "events#upvote"
@@ -17,6 +20,9 @@ Rails.application.routes.draw do
   resources :abouts
   resources :bloggers
   resources :videos do
+    collection do
+      get 'search'
+    end
     member do
       put "like", to: "videos#upvote"
       put "dislike", to: "videos#downvote"
@@ -24,6 +30,9 @@ Rails.application.routes.draw do
   end
   resources :homes
   resources :musics do
+    collection do
+      get 'search'
+    end
     resources :musiccomments
     member do
       put "like", to: "musics#upvote"

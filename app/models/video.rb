@@ -1,5 +1,6 @@
 class Video < ApplicationRecord
   acts_as_votable
+  searchkick
   def self.highest_voted
     self.all.order("cached_votes_score DESC")
   end

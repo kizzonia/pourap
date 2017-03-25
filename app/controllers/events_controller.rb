@@ -1,6 +1,12 @@
 class EventsController < ApplicationController
   layout "bloggers", except:[:index, :show]
   before_action :set_event, only: [:show, :edit, :upvote, :downvote, :update, :destroy]
+  def search
+    if params[:search].present?
+      @events = Event.search(params[:search])
+    else
+      @events = Event.all.order("created_at DESC")
+    end
   def index
     @events = Event.all.order('created_at DESC')
     @videos = Video.highest_voted.all.limit(10)

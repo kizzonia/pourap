@@ -1,7 +1,12 @@
 class MusicsController < ApplicationController
   layout "bloggers", except: [:index, :show]
   before_action :set_music, only:[:show, :edit, :upvote, :downvote, :update, :destroy]
-
+  def search
+    if params[:search].present?
+      @musics = Music.search(params[:search])
+    else
+      @musics = Music.all.order("created_at DESC")
+    end
   def index
     @musics = Music.all.order("created_at DESC")
     @musics = Music.highest_voted.limit(10)

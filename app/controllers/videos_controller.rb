@@ -1,6 +1,13 @@
 class VideosController < ApplicationController
   layout "bloggers", except:[:index, :show]
  before_action :set_about, only: [:show, :destroy]
+
+ def search
+   if params[:search].present?
+     @videos = Video.search(params[:search])
+   else
+     @videos = Video.all.order("created_at DESC")
+   end
   def index
     @videos = Video.all.order('created_at DESC')
     @abouts = About.all
