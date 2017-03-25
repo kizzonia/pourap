@@ -23,7 +23,10 @@
   border: 1px solid #b3b3b3;
   border-radius: 20px 0 0 20px;
 }
-
+.top{
+  position: relative;
+  margin-top: 25%;
+}
 .submit1 {
   cursor: pointer;
   border: none;
@@ -34,4 +37,5 @@
   display: inline-block;
   width: 150px;
   height: 80px;
+  margin-top: -10px;
 }
