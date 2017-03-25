@@ -8,6 +8,7 @@ class VideosController < ApplicationController
    else
      @videos = Video.all.order("created_at DESC")
    end
+ end
   def index
     @videos = Video.all.order('created_at DESC')
     @abouts = About.all

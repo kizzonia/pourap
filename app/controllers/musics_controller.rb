@@ -7,6 +7,7 @@ class MusicsController < ApplicationController
     else
       @musics = Music.all.order("created_at DESC")
     end
+  end
   def index
     @musics = Music.all.order("created_at DESC")
     @musics = Music.highest_voted.limit(10)
