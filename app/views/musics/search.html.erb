@@ -1,15 +1,13 @@
 <div class="banner-1">
   <div class="container">
     <div class="col-md-12">
-      <%= simple_form_for search_musics_path, method: :get, class: "form-horizontal", role: "search" do |f| %>
-      <div class="form-group col-md-9">
-        <%=f.input :search, class: "form-control ", placeholder: "Search" %>
-      </div>
-      <div class="form-group col-md-3">
-    <%=f.submit :search, name:nil, class: "form-control" do %><%=fa_icon 'search 2x'%><% end %>
+      <div class="wrapper top">
+      <%= form_tag search_musics_path, method: :get, role: "search" do  %>
+        <%=text_field_tag :search, params[:search], class: "search1", placeholder: "Search" %>
+        <%=submit_tag "search", name:nil, label: false,  class: "submit1"  %>
         <% end %>
       </div>
-    </div>
+      </div>
   </div>
 </div>
 <div class="technology">
