@@ -7,6 +7,7 @@ class EventsController < ApplicationController
     else
       @events = Event.all.order("created_at DESC")
     end
+  end 
   def index
     @events = Event.all.order('created_at DESC')
     @videos = Video.highest_voted.all.limit(10)
