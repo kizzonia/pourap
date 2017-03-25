@@ -1,0 +1,68 @@
+<div class="banner-3">
+	<div class="container">
+    <div class="col-md-12">
+      <%= simple_form_for search_events_path, method: :get, class: "form-horizontal", role: "search" do |f| %>
+      <div class="form-group col-md-9">
+        <%=f.input :search, class: "form-control ", placeholder: "Search" %>
+      </div>
+      <div class="form-group col-md-3">
+        <%=f.submit :search, name:nil, class: "form-control" do %><%=fa_icon 'search 2x'%><% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="technology">
+	<div class="container">
+		<div class="col-md-9 technology-left">
+		<div class="tech-no">
+			<!-- technology-top -->
+      <% @events.each do |event| %>
+
+			 <div class="tc-ch wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+
+					<div class="tch-img">
+            <%= image_tag event.thumbnail.url(:medium), class: "img-responsive" %>
+					</div>
+
+					<h3><%=link_to event.title %></h3>
+					<h6>Posted at <%= event.created_at.strftime("%b, %d, %y") %></h6>
+						<p><%= raw(event.shortDescription) %>.</p>
+            <P><%= event.location %></P>
+            <p><%= event.eventDate %></p>
+						<div class="bht1">
+							<%= link_to "Continue Reading", event %>
+						</div>
+            <div class="btn btn-warning">
+              <%= link_to event, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <%= fa_icon "trash-o" %>
+                <% end %>
+              </div>
+              <div class="btn btn-warning">
+                <%= link_to edit_event_path(event) do %>
+                  <%= fa_icon "pencil-square-o" %>
+                  <% end %>
+                </div>
+
+						<div class="soci">
+							<ul>
+								<%= link_to like_event_path(event), method: :put do %>
+								<li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-up", class: "btn btn-default btn-sm" %>Like(<%= event.get_upvotes.size %>)</li><% end %>
+								<%= link_to dislike_event_path(event), method: :put do %>
+								<li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-down", class: "btn btn-default btn-sm" %> Dislike(<%=event.get_downvotes.size %>)</li><% end %>
+								<li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
+								<li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
+								<li class="hvr-rectangle-out"><a class="goog" href="#"></a></li>
+								<li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
+								<li class="hvr-rectangle-out"><a class="drib" href="#"></a></li>
+							</ul>
+						</div>
+						<div class="clearfix"></div>
+			</div>
+        <% end %>
+			<div class="clearfix"></div>
+    </div>
+		<%= render "shared/sidebar" %>
+
+  </div>
+</div>
