@@ -1,4 +1,16 @@
 <div class="banner-3">
+	<div class="container">
+    <div class="col-md-12">
+      <%= simple_form_for search_events_path, method: :get, class: "form-horizontal", role: "search" do |f| %>
+      <div class="form-group col-md-9">
+        <%=f.input :search, class: "form-control ", placeholder: "Search" %>
+      </div>
+      <div class="form-group col-md-3">
+        <%=f.submit :search, name:nil, class: "form-control" do %><%=fa_icon 'search 2x'%><% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="technology">
 	<div class="container">
