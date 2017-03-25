@@ -25,9 +25,10 @@
 }
 .top{
   position: relative;
-  margin-top: 25%;
+  margin-top: 18%;
 }
 .submit1 {
+  position: relative;
   cursor: pointer;
   border: none;
   background: url("http://thesuiteworld.com/wp-admin/maint/search-icon-white-png-540.png") no-repeat center center, #fbd14b;
