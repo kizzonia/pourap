@@ -1,7 +1,7 @@
 class Music < ApplicationRecord
   acts_as_votable
    searchkick
-  has_attached_file :albumimage, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :albumimage, styles: { large: "1200x1000#", medium: "600x500#" }, default_url: "/images/:style/missing.png"
 validates_attachment_content_type :albumimage, content_type: /\Aimage\/.*\z/
 
 has_attached_file :song
