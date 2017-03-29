@@ -4,6 +4,8 @@ class MusicsController < ApplicationController
   def search
     if params[:search].present?
       @musics = Music.search(params[:search])
+      @musics = Music.highest_voted.limit(10)
+       @videos = Video.highest_voted.limit(10)
     else
       @musics = Music.all.order("created_at DESC")
     end

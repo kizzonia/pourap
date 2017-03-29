@@ -4,10 +4,12 @@ class EventsController < ApplicationController
   def search
     if params[:search].present?
       @events = Event.search(params[:search])
+      @musics = Music.highest_voted.limit(10)
+       @videos = Video.highest_voted.limit(10)
     else
       @events = Event.all.order("created_at DESC")
     end
-  end 
+  end
   def index
     @events = Event.all.order('created_at DESC')
     @videos = Video.highest_voted.all.limit(10)
