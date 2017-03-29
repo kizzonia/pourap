@@ -10,9 +10,10 @@
 
           <div class="col-md-12">
 
-              <%= link_to "https://www.youtube.com/watch?v=#{@video.uid}", target: '_blank' do %>
+
               <%= image_tag("https://img.youtube.com/vi/#{@video.uid}/hqdefault.jpg", alt: @video.title,
               class: ' img-responsive ')  %>
+                <%= link_to "https://www.youtube.com/watch?v=#{@video.uid}", target: '_blank' do %>
               <%= fa_icon "youtube-play 3x", class: "play3" %>
 
               <%end%>
