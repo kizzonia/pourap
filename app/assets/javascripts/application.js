@@ -19,7 +19,6 @@
 //= require uisearch
 //= require_tree .
 //= require classie
-//= require yt_player
 //= require jquery.chocolat
 //= require wow.min
 //= require bloggers
