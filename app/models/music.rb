@@ -1,6 +1,11 @@
+require 'elasticsearch/model'
 class Music < ApplicationRecord
   acts_as_votable
-   searchkick
+    include Elasticsearch::Model
+    include Elasticsearch::Model::Callbacks
+    searchkick
+    #currently use this function for search. (It works)
+    scope :searching, ->(query) { __elasticsearch__.search(query).records }
   has_attached_file :albumimage, styles: { large: "1200x1000#", medium: "600x500#" }, default_url: "/images/:style/missing.png"
 validates_attachment_content_type :albumimage, content_type: /\Aimage\/.*\z/
 
