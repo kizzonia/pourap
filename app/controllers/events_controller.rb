@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  layout "bloggers", except:[:index, :show]
+  layout "bloggers", except:[:index, :show, :search]
   before_action :set_event, only: [:show, :edit, :upvote, :downvote, :update, :destroy]
   def search
     if params[:search].present?

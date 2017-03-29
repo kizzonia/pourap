@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  layout "bloggers", except:[:index, :show]
+  layout "bloggers", except:[:index, :show, :search]
  before_action :set_about, only: [:show, :destroy]
 
  def search

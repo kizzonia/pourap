@@ -1,5 +1,5 @@
 class MusicsController < ApplicationController
-  layout "bloggers", except: [:index, :show]
+  layout "bloggers", except: [:index, :show, :search]
   before_action :set_music, only:[:show, :edit, :upvote, :downvote, :update, :destroy]
   def search
     if params[:search].present?
