@@ -1,8 +1,5 @@
-require 'elasticsearch/model'
 class Video < ApplicationRecord
   acts_as_votable
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
   searchkick
   #currently use this function for search. (It works)
   scope :searching, ->(query) { __elasticsearch__.search(query).records }
