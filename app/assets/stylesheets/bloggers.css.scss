@@ -2,6 +2,15 @@
 Lumino Admin Bootstrap Template
 Version 1.0
 */
+*= require font-awesome
+
+@import "bootstrap";
+@import "animate.min";
+@import "chocolat";
+@import "component";
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Mr+Dafoe|Pacifico|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Raleway');
 @import "font-awesome";
 .bk{
 	background-image: url("../assets/log.jpg");
