@@ -10,13 +10,7 @@
           <div class="col-md-12 col-sm-12" >
           <%= image_tag @music.albumimage.url(:medium), class: "img-responsive" %>
         </div>
-          <div class="b-bottom">
-            <h5 class="top">SubStory: <%= raw(@music.subtitle) %></h5>
-            <br>
-            <p class="sub"><%= raw(@music.description) %>.</p>
-          </div>
 
-          <br>
           <br>
           <div class="content-container">
             <div id="jquery_jplayer_1" class="jp-jplayer"></div>
@@ -71,6 +65,11 @@
             </div>
           </div>
           <br>
+          <div class="b-bottom">
+            <h5 class="top">SubStory: <%= raw(@music.subtitle) %></h5>
+            <br>
+            <p class="sub"><%= raw(@music.description) %>.</p>
+          </div>
           <div class="b-bottom">
             <p class"sub" >Discogrphy:<%= raw(@music.discography) %> </p>
             <p class="sub"> Published At<%= @music.published %> </p>

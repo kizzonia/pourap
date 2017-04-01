@@ -14,6 +14,7 @@
 //= require jquery
 //= require bootstrap
 //= require jquery.jplayer.min
+//= require jquery.mb.YTPlayer
 //= require jquery_ujs
 //= require turbolinks
 //= require uisearch

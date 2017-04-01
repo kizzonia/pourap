@@ -10,6 +10,9 @@
 				<div class="col-md-8 col-sm-6 col-xs-6  ctext">
 					<p style="color:#fff;">" <%= banner.qoute %> " </p>
 					<p class="text-center"> <%=banner.qouter %> </p>
+					<% if blogger_signed_in> %>
+					<p class="text-center"><%= link_to blogger_path(blogger), method: :delete, remote: true,  data: { confirm: 'Are you sure?' } do  %>
+					<%= fa_icon "trash-o", class: "btn-sm" %><%end %></p> <% end %>
 				</div>
 				<% end %>
 			</div>

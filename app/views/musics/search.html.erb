@@ -43,15 +43,14 @@
                 <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-down", class: " btn-sm" %>(<%=music.get_downvotes.size %>)</li><% end %>
                 <li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
                 <li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
+                <% if blogger_signed_in? %>
                 <li class="hvr-rectangle-out" >
                 <%= link_to music_path(music), method: :delete, remote: true,  data: { confirm: 'Are you sure?' } do  %>
                 <%= fa_icon "trash-o", class: "btn-sm" %>
+                  <% end %>
               </li>
-
-
-
                 <% end %>
-              </li>
+
               </ul>
             </div>
             <div class="clearfix"></div>
