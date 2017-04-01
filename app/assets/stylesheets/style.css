@@ -352,6 +352,19 @@ height: 380px;
 
 
 }
+.bk{
+	background-image: url("../assets/log.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	min-width: 100%;
+	min-height: 100%;
+
+}
 
 .banner-1{
 	background-image: url("../assets/7.jpg");
