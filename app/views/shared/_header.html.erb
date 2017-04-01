@@ -34,11 +34,15 @@
 					<nav class="link-effect-7" id="link-effect-7">
 						<ul class="nav navbar-nav">
 							<li class="active act"><%= link_to "Home", root_path %></li>
-							<li class="active act"><%= link_to "Projects", events_path %></li>
-							<li class="active act"><%= link_to "Videos", videos_path %></li>
+							<% if blogger_signed_in? %>
 							<li class="active act"><%= link_to "Admin", bloggers_path %></li>
+							<%else %>
 							<li class="active act"><%= link_to "Music", musics_path %></li>
+							<li class="active act"><%= link_to "Videos", videos_path %></li>
+							<li class="active act"><%= link_to "Projects", events_path %></li>
 							<li><a href="contact.html">Contact</a></li>
+
+							<% end %>
 						</ul>
 					</nav>
 				</div>

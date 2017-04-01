@@ -16,7 +16,7 @@ Version 1.0
 	background-image: url("../assets/log.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height:1400px;
+	min-height:1000px;
 	min-width: 100%;
 	margin:0 auto;
 	padding: 0;
@@ -29,6 +29,7 @@ body {
 	background: #f1f4f7;
 	padding-top: 50px;
 	color: #5f6468;
+	overflow-x: hidden;
 }
 
 p {
