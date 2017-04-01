@@ -9,18 +9,9 @@
         <div class="single">
 
           <div class="col-md-12">
-            <div id="P1" class="player" style="display:block; height:200px;" data-property="{videoURL:'<%=@video.uid%>', containment:'self',showControls:true,startAt:6,mute:false,autoPlay:false,loop:false,opacity:1,showYTLogo:true, optimizeDisplay:false}">
-            </div>
-
-    <div class="controls">
-        <button onclick="jQuery('#P1').YTPPlay()">play</button>
-        <button onclick="jQuery('#P1').YTPPause()">pause</button>
-        <button onclick="jQuery('#P1').YTPToggleVolume()">mute/unmute</button>
-        <button onclick="jQuery('#P1').YTPFullscreen()">go fullscreen</button>
-    </div>
 
 
-              <%= image_tag("https://img.youtube.com/vi/#{@video.uid}/hqdefault.jpg", alt: @video.title,
+              <%= image_tag("https://img.youtube.com/vi/#{@video.uid}/mqdefault.jpg", alt: @video.title,
               class: ' img-responsive ')  %>
                 <%= link_to "https://www.youtube.com/watch?v=#{@video.uid}" do %>
               <%= fa_icon "youtube-play 3x", class: "play3" %>
