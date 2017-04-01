@@ -9,6 +9,15 @@
         <div class="single">
 
           <div class="col-md-12">
+            <div id="P1" class="player" style="display:block;" data-property="{videoURL:'https://www.youtube.com/watch?v=#{@video.uid}', containment:'self',showControls:true,startAt:6,mute:false,autoPlay:false,loop:false,opacity:1,showYTLogo:true, optimizeDisplay:false}">
+            </div>
+
+    <div class="controls">
+        <button onclick="jQuery('#P1').YTPPlay()">play</button>
+        <button onclick="jQuery('#P1').YTPPause()">pause</button>
+        <button onclick="jQuery('#P1').YTPToggleVolume()">mute/unmute</button>
+        <button onclick="jQuery('#P1').YTPFullscreen()">go fullscreen</button>
+    </div>
 
 
               <%= image_tag("https://img.youtube.com/vi/#{@video.uid}/hqdefault.jpg", alt: @video.title,
@@ -43,3 +52,15 @@
 
     </div>
   </div>
+  <script>
+
+    jQuery(function(){
+        var isIframe=function(){var a=!1;try{self.location.href!=top.location.href&&(a=!0)}catch(b){a=!0}return a};if(!isIframe()){var logo=$("<a href='https://www.youtube.com/watch?v=#{@video.uid}' style='position:absolute;top:0;z-index:1000'><img id='logo' border='0' src='http://pupunzi.com/images/logo.png' alt='mb.ideas.repository'></a>");$("#wrapper").prepend(logo),$("#logo").fadeIn()}
+
+        var myPlayer = jQuery("#P1").YTPlayer();
+
+        myPlayer.on("YTPData", function (e) {
+            $(".dida").html(e.prop.title + "<br>@" + e.prop.channelTitle);
+        });
+
+        </script>
