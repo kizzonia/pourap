@@ -1,4 +1,5 @@
 class MusicsController < ApplicationController
+  before_action :authenticate_blogger!, except: [:index, :show]
   layout "bloggers", except: [:index, :show, :search]
   before_action :set_music, only:[:show, :edit, :upvote, :downvote, :update, :destroy]
   def search
