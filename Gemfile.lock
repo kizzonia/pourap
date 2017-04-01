@@ -80,14 +80,13 @@ GEM
       aws-sdk-core (= 2.7.12)
     aws-sigv4 (1.0.0)
     bcrypt (3.1.11-x64-mingw32)
+    bonsai-elasticsearch-rails (0.2.0)
+      elasticsearch-model (~> 0)
+      elasticsearch-rails (~> 0)
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
     builder (3.2.3)
-    carrierwave (1.0.0)
-      activemodel (>= 4.0.0)
-      activesupport (>= 4.0.0)
-      mime-types (>= 1.16)
     climate_control (0.1.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
@@ -111,6 +110,11 @@ GEM
       elasticsearch-transport (= 5.0.3)
     elasticsearch-api (5.0.3)
       multi_json
+    elasticsearch-model (0.1.9)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-rails (0.1.9)
     elasticsearch-transport (5.0.3)
       faraday
       multi_json
@@ -126,6 +130,10 @@ GEM
       actionpack (>= 4.1, < 5.1)
       activesupport (>= 4.1, < 5.1)
     hashie (3.5.5)
+    httmultiparty (0.3.16)
+      httparty (>= 0.7.3)
+      mimemagic
+      multipart-post
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     i18n (0.8.0)
@@ -205,10 +213,9 @@ GEM
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
-    simple_form_fancy_uploads (0.2.0)
-      carrierwave
-      rails (>= 4.0.0)
-      simple_form (~> 3.1)
+    soundcloud (0.3.4)
+      hashie
+      httmultiparty (~> 0.3.0)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -249,6 +256,7 @@ DEPENDENCIES
   acts_as_votable (~> 0.10.0)
   autoprefixer-rails
   aws-sdk (> 2.0)
+  bonsai-elasticsearch-rails
   bootstrap (~> 4.0.0.alpha3)
   byebug
   ckeditor!
@@ -267,7 +275,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   searchkick
   simple_form
-  simple_form_fancy_uploads
+  soundcloud
   sqlite3
   turbolinks (~> 5)
   tzinfo-data

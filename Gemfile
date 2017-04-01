@@ -29,17 +29,16 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'searchkick'
-gem 'rmagick'
 gem 'bonsai-elasticsearch-rails', group: :production # for Bonsai plugin on heroku
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 gem 'pg'
+gem 'soundcloud'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
-
+group :production do
+  #gem 'rmagick'
+end
 group :development do
   gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
