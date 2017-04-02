@@ -7,10 +7,13 @@
 
         <h2 class="w3"><%= @music.songname %></h2>
         <div class="b-bottom">
+          <div class="single">
           <div class="col-md-12 col-sm-12" >
           <%= image_tag @music.albumimage.url, class: "img-responsive" %>
         </div>
+      </div>
         <div class="space"></div>
+        <div class="row">
           <div class="content-container col-md-12">
             <div id="jquery_jplayer_1" class="jp-jplayer"></div>
             <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -52,7 +55,7 @@
               </div>
             </div>
           </div>
-
+        </div>
           <br>
           <div class="text-center col-md-12">
             <div class="col-md-6 col-md-offset-4">
