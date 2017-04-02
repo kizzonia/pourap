@@ -217,7 +217,7 @@ label.icon-search span {
 }
 .header_right {
     float: left;
-    margin-left:20px;
+    margin-left: 0em;
     margin-right: 3em;
 }
 .head-left {
@@ -227,7 +227,7 @@ label.icon-search span {
 }
 .navbar {
     margin-bottom: 0;
-		margin-left: 40px;
+
 }
 .navbar-default {
     background: none;
@@ -235,6 +235,7 @@ label.icon-search span {
 }
 .navbar-default .navbar-nav > li > a {
     color: #303030;
+		margin-left: 40px;
 }
 .navbar-nav > li > a {
     font-size: 14px;
@@ -341,7 +342,7 @@ height: 380px;
 	background-size: cover;
 	opacity: 0.8;
 	position: relative;
-	margin-top: -160px;
+	margin-top: -150px;
 	overflow:hidden;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
