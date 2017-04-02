@@ -12,7 +12,10 @@
         </div>
       </div>
           <br>
-          <div class="content-container col-md-8 col-md-0ffset-1">
+          <br />
+          <br>
+          <div class="clear-fix"></div>
+          <div class="content-container col-md-8 col-md-offset-1">
             <div id="jquery_jplayer_1" class="jp-jplayer"></div>
             <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
               <div class="jp-type-playlist">
@@ -53,10 +56,21 @@
               </div>
             </div>
           </div>
+          <div class="soci">
+            <ul>
+            <%= link_to like_music_path, method: :put do %>
+            <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-up", class: "btn btn-default btn-sm" %>(<%= @music.get_upvotes.size %>)</li><% end %>
+            <%= link_to dislike_music_path, method: :put do %>
+            <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-down", class: "btn btn-default btn-sm" %> (<%=@music.get_downvotes.size %>)</li><% end %>
+          </ul>
+        </div>
           <br>
           <div class="text-center col-md-12">
             <div class="col-md-6 col-md-offset-4">
-              <%= button_to "Download", download_music_path, :method => :get, class: " bht1" %>
+              <%= link_to  download_music_path, :method => :get, class: " btn btn-warning" do %>
+              <%= fa_icon "download 2x" %>
+              <% end %>
+
             </div>
           </div>
           <br>
@@ -70,14 +84,7 @@
             <p class="sub"> Published At<%= @music.published %> </p>
           </div>
 
-          <div class="soci">
-            <ul>
-            <%= link_to like_music_path, method: :put do %>
-            <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-up", class: "btn btn-default btn-sm" %>(<%= @music.get_upvotes.size %>)</li><% end %>
-            <%= link_to dislike_music_path, method: :put do %>
-            <li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-down", class: "btn btn-default btn-sm" %> (<%=@music.get_downvotes.size %>)</li><% end %>
-          </ul>
-        </div>
+
         <%= render @music.musiccomments %>
         <%= render 'musiccomments/form' %>
       </div>
