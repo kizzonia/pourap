@@ -227,6 +227,7 @@ label.icon-search span {
 }
 .navbar {
     margin-bottom: 0;
+		margin-left: 40px;
 }
 .navbar-default {
     background: none;
