@@ -7,6 +7,9 @@ class EventsController < ApplicationController
       @events = Event.search(params[:search])
       @musics = Music.highest_voted.limit(10)
        @videos = Video.highest_voted.limit(10)
+         @abouts = About.all.limit(1)
+         @facts = Fact.all.order("created_at DESC").limit(1)
+
     else
       @events = Event.all.order("created_at DESC")
     end
@@ -15,11 +18,14 @@ class EventsController < ApplicationController
     @events = Event.all.order('created_at DESC')
     @videos = Video.highest_voted.all.limit(10)
     @musics = Music.highest_voted.all.limit(10)
+      @abouts = About.all.limit(1)
   end
 
   def show
     @videos = Video.highest_voted.all.limit(10)
     @musics = Music.highest_voted.all.limit(10)
+    @facts = Fact.all.order("created_at DESC").limit(1)
+      @abouts = About.all.limit(1)
   end
 
   def new

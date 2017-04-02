@@ -6,15 +6,13 @@
 			<div class="blog-grids">
 				<div class="blog-grid-left">
 					<%= link_to m do %>
-						<%= image_tag m.albumimage.url(:medium), class: "img-responsive" %>
+						<%= image_tag m.albumimage.url, class: "img-responsive" %>
 						<% end %>
 				</div>
 				<div class="blog-grid-right">
-
 					<h5> <%=link_to m.songname %> </h5>
 				</div>
-				<div class="clearfix"> </div>
-			</div>
+				<br>
 			<% end %>
 
 				<h4>Top Videos</h4>
@@ -25,23 +23,38 @@
 						<%= link_to v, target: '_blank' do %>
 						<%= image_tag("https://img.youtube.com/vi/#{v.uid}/mqdefault.jpg", alt: v.title,
 						class: ' img-responsive ') %>
-						<span><%= fa_icon "youtube-play ", class: "text-center" %></span>
+
 						<%end%>
 					</div>
 
 					<div class="blog-grid-right">
-						<%= link_to v.title %>
+						<h5><%= link_to v.title %><h5>
 					</div>
 						</div>
 						<% end%>
+
+						<h4> Did You Know...? </h4>
+						<% @facts.each do |f|%>
+						<div class="blog-grids">
+							<div class="blog-grids-left">
+								<%= link_to f do %>
+									<%= image_tag f.thumbnail.url, class: "img-responsive"%>
+									<% end %>
+								</div>
+								<div class="blog-grid-right">
+									<h5><%= f.fun1 %> </h5>
+									<h5><%= f.fun2 %> </h5>
+									<h5><%= f.fun3 %> </h5>
+								</div>
+							</div>
+							<% end %>
+
+
 
 
 
 
 		</div>
-
-
-
 	</div>
 
 

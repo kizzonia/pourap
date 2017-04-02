@@ -7,6 +7,8 @@ class MusicsController < ApplicationController
       @musics = Music.search(params[:search])
       @musics = Music.highest_voted.limit(10)
        @videos = Video.highest_voted.limit(10)
+       @facts = Fact.all.order('created_at DESC').limit(1)
+
     else
       @musics = Music.all.order("created_at DESC")
     end
@@ -15,12 +17,16 @@ class MusicsController < ApplicationController
     @musics = Music.all.order("created_at DESC")
     @musics = Music.highest_voted.limit(10)
      @videos = Video.highest_voted.limit(10)
-
+     @facts = Fact.all.order('created_at DESC').limit(1)
+  @abouts = About.all.limit(1)
   end
 
   def show
     @videos = Video.highest_voted.all.limit(10)
     @musics = Music.highest_voted.all.limit(10)
+    @facts = Fact.all.order('created_at DESC').limit(1)
+      @abouts = About.all.limit(1)
+
 
   end
 

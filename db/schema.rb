@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320131749) do
+ActiveRecord::Schema.define(version: 20170402171511) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "name"
@@ -97,6 +97,18 @@ ActiveRecord::Schema.define(version: 20170320131749) do
     t.index ["event_id"], name: "index_eventscomments_on_event_id"
   end
 
+  create_table "facts", force: :cascade do |t|
+    t.string   "fun1"
+    t.string   "fun2"
+    t.string   "fun3"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
+  end
+
   create_table "homes", force: :cascade do |t|
     t.string   "picture_name"
     t.datetime "created_at",             null: false
@@ -163,6 +175,16 @@ ActiveRecord::Schema.define(version: 20170320131749) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "ip"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.integer  "soundcloud_user_id"
+    t.string   "soundcloud_username"
+    t.string   "soundcloud_access_token"
+    t.string   "soundcloud_refresh_token"
+    t.datetime "soundcloud_expires_at"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "videos", force: :cascade do |t|

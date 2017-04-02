@@ -1,0 +1,24 @@
+<%= simple_form_for(@fact, url: facts_path, html: { class: 'form-horizontal' }) do |f| %>
+
+<div class="form-group">
+  <%= f.input :fun1, class: "form-control", input_html: { ckeditor: { toolbar: 'Full' } } %>
+</div>
+
+<div class="form-group">
+  <%= f.input :fun2, class: "form-control", input_html: { ckeditor: { toolbar: 'Full' } } %>
+</div>
+
+<div class="form-group">
+  <%= f.input :fun3, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+
+</div>
+<div class="form-group">
+    <%= f.input :thumbnail, as: :file, paceholder: "Add display picture" %>
+  </div>
+
+<div class="form-group">
+  <%= f.submit :submit, class: "btn btn-success" %>
+</div>
+
+
+<% end %>
