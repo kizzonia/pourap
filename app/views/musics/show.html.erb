@@ -8,11 +8,11 @@
         <h2 class="w3"><%= @music.songname %></h2>
         <div class="single">
           <div class="col-md-12 col-sm-12" >
-          <%= image_tag @music.albumimage.url(:medium), class: "img-responsive" %>
+          <%= image_tag @music.albumimage.url, class: "img-responsive" %>
         </div>
-
+      </div>
           <br>
-          <div class="content-container">
+          <div class="content-container col-md-8 col-md-0ffset-1">
             <div id="jquery_jplayer_1" class="jp-jplayer"></div>
             <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
               <div class="jp-type-playlist">
@@ -44,9 +44,6 @@
                     <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
                   </div>
                 </div>
-
-
-
                 <!-- FlashPlayer Fallback-->
                 <div class="jp-no-solution">
                   <span>Update Required</span>
@@ -55,13 +52,11 @@
                 <!-- /FlashPlayer Fallback-->
               </div>
             </div>
-
-
           </div>
           <br>
           <div class="text-center col-md-12">
             <div class="col-md-6 col-md-offset-4">
-              <%= button_to "Download", download_music_path, :method => :get, class: " btn-lg bht1" %>
+              <%= button_to "Download", download_music_path, :method => :get, class: " bht1" %>
             </div>
           </div>
           <br>
@@ -74,7 +69,7 @@
             <p class"sub" >Discogrphy:<%= raw(@music.discography) %> </p>
             <p class="sub"> Published At<%= @music.published %> </p>
           </div>
-        </div>
+
           <div class="soci">
             <ul>
             <%= link_to like_music_path, method: :put do %>

@@ -7,7 +7,7 @@
 
 		  <h2 class="w3"><%= @event.title %></h2>
 			<div class="single">
-        <%= image_tag @event.thumbnail.url(:medium), class: "img-responsive " %>
+        <%= image_tag @event.thumbnail.url, class: "img-responsive " %>
 
 			    <div class="b-bottom">
 			      <h5 class="top"> Topic: <%= raw(@event.shortDescription) %>

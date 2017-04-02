@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   acts_as_votable
   searchkick
-  has_attached_file :thumbnail, styles: { large: "1200x1000#", medium: "600x500#" }
+  has_attached_file :thumbnail
 
 validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\z/
 

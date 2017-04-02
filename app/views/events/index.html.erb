@@ -20,7 +20,7 @@
 			 <div class="tc-ch wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
 
 					<div class="tch-img">
-            <%= image_tag event.thumbnail.url(:large), class: "img-responsive" %>
+            <%= image_tag event.thumbnail.url, class: "img-responsive" %>
 					</div>
 
 					<h3><%=link_to event.title %></h3>
@@ -31,16 +31,6 @@
 						<div class="bht1">
 							<%= link_to "Continue Reading", event %>
 						</div>
-            <div class="btn btn-warning">
-              <%= link_to event, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                <%= fa_icon "trash-o" %>
-                <% end %>
-              </div>
-              <div class="btn btn-warning">
-                <%= link_to edit_event_path(event) do %>
-                  <%= fa_icon "pencil-square-o" %>
-                  <% end %>
-                </div>
 
 						<div class="soci">
 							<ul>
@@ -49,10 +39,13 @@
 								<%= link_to dislike_event_path(event), method: :put do %>
 								<li class="hvr-rectangle-out"><%= fa_icon "thumbs-o-down", class: "btn btn-default btn-sm" %> Dislike(<%=event.get_downvotes.size %>)</li><% end %>
 								<li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
-								<li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
-								<li class="hvr-rectangle-out"><a class="goog" href="#"></a></li>
-								<li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
-								<li class="hvr-rectangle-out"><a class="drib" href="#"></a></li>
+								<li class="hvr-rectangle-out"><%= link_to event, method: :delete, data: { confirm: 'Are you sure?' } do %>
+	                <%= fa_icon "trash-o" %>
+	                <% end %></a></li>
+								<li class="hvr-rectangle-out"><%= link_to edit_event_path(event) do %>
+                  <%= fa_icon "pencil-square-o" %>
+                  <% end %></a></li>
+
 							</ul>
 						</div>
 						<div class="clearfix"></div>
@@ -60,6 +53,7 @@
         <% end %>
 			<div class="clearfix"></div>
     </div>
+	</div>
 		<%= render "shared/sidebar" %>
 
   </div>

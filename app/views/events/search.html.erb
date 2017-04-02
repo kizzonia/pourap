@@ -20,7 +20,7 @@
 			 <div class="tc-ch wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
 
 					<div class="tch-img">
-            <%= image_tag event.thumbnail.url(:medium), class: "img-responsive" %>
+            <%= image_tag event.thumbnail.url, class: "img-responsive" %>
 					</div>
 
 					<h3><%=link_to event.title %></h3>
@@ -60,6 +60,7 @@
         <% end %>
 			<div class="clearfix"></div>
     </div>
+	</div>
 		<%= render "shared/sidebar" %>
 
   </div>
