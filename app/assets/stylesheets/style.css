@@ -216,7 +216,7 @@ label.icon-search span {
 	-ms-transform:rotateY(360deg);
 }
 .header_right {
-  
+    float: left;
     margin-left: 0em;
     margin-right: 3em;
 }
@@ -232,7 +232,7 @@ label.icon-search span {
 .navbar-default {
     background: none;
     border: none;
-		margin-left: 40px;
+		margin-left: 80px;
 }
 .navbar-default .navbar-nav > li > a {
     color: #303030;
