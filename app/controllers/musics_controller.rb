@@ -33,6 +33,7 @@ class MusicsController < ApplicationController
 
     if @music.save
       redirect_to @music
+      flash = { success: "Congratulations!! Created Successfully", error: "Action Not Successfull." }
     else
       render 'new'
     end

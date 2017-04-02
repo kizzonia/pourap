@@ -32,7 +32,7 @@ end
 def create
 @video = Video.new(video_params)
   if @video.save
-    flash[:success] = 'Video added!'
+  flash = { success: "Congratulations!! Video Added Successfully", error: "Action Not Successfull." }
     redirect_to root_url
   else
     render 'new'

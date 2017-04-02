@@ -34,6 +34,7 @@ class EventsController < ApplicationController
 
     if @event.save
       redirect_to @event
+      flash = { success: "Congratulations!! Created Successfully", error: "Action Not Successfull." }
     else
       render 'new'
     end

@@ -31,7 +31,8 @@ class BannersController < ApplicationController
 
     respond_to do |format|
       if @banner.save
-        format.html { redirect_to root_path, notice: 'banner was successfully created.' }
+        format.html { redirect_to root_path }
+         flash = { success: "Congratulations!! Created Successfully", error: "Action Not Successfull." }
       else
         format.html { render :new }
         format.json { render json: @banner.errors, status: :unprocessable_entity }
