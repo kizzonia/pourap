@@ -45,7 +45,9 @@ class BannersController < ApplicationController
   def update
     respond_to do |format|
       if @banner.update(banner_params)
-        format.html { redirect_to root_path, notice: 'banner was successfully updated.' }
+        format.html { redirect_to root_path }
+        flash = { success: "Congratulations!! Updated Successfully", error: "Action Not Successfull." }
+
         format.json { render :show, status: :ok, location: @banner }
       else
         format.html { render :edit }
@@ -59,7 +61,9 @@ class BannersController < ApplicationController
   def destroy
     @banner.destroy
     respond_to do |format|
-      format.html { redirect_to banners_url, notice: 'banner was successfully destroyed.' }
+      format.html { redirect_to banners_url }
+      flash = { success: "Congratulations!! Deleted Successfully", error: "Action Not Successfull." }
+
       format.json { head :no_content }
     end
   end

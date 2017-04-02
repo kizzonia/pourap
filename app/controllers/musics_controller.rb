@@ -46,6 +46,8 @@ class MusicsController < ApplicationController
   def update
     if @music.update
       redirect_to @music
+      flash = { success: "Congratulations!! Updated Successfully", error: "Action Not Successfull." }
+
     else
       render 'edit'
     end
@@ -55,6 +57,8 @@ class MusicsController < ApplicationController
   def destroy
     @music.destroy
     redirect_to musics_url
+    flash = { success: "Congratulations!! Deleted Successfully", error: "Action Not Successfull." }
+
   end
 
   def upvote

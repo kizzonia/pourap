@@ -44,7 +44,9 @@ class AboutsController < ApplicationController
   def update
     respond_to do |format|
       if @about.update(about_params)
-        format.html { redirect_to @about, notice: 'About was successfully updated.' }
+        format.html { redirect_to @about}
+        flash = { success: "Congratulations!! Updated Successfully", error: "Action Not Successfull." }
+
         format.json { render :show, status: :ok, location: @about }
       else
         format.html { render :edit }
@@ -58,7 +60,9 @@ class AboutsController < ApplicationController
   def destroy
     @about.destroy
     respond_to do |format|
-      format.html { redirect_to abouts_url, notice: 'About was successfully destroyed.' }
+      format.html { redirect_to abouts_url }
+      flash = { success: "Congratulations!! Deleted Successfully", error: "Action Not Successfull." }
+
       format.json { head :no_content }
     end
   end

@@ -42,7 +42,10 @@ class EventsController < ApplicationController
 
     def update
       if @event.update(event_params)
+
         redirect_to @event
+        flash = { success: "Congratulations!! Updated Successfully", error: "Action Not Successfull." }
+
       else
         render "edit"
       end
@@ -50,6 +53,8 @@ class EventsController < ApplicationController
 
       def destroy
         @event.destroy
+        flash = { success: "Congratulations!! Deleted Successfully", error: "Action Not Successfull." }
+
         redirect_to root_path
       end
 
