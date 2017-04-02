@@ -11,13 +11,14 @@
         <p><%= raw(music.description) %></p>
         <p>By <%= music.artist %> </p>
         <div class="bht1">
-          <%= link_to "Read More", music %>
+          <%= link_to music do %>
+            <%= fa_icon "play 2x" %>
+            <% end %>
         </div>
         <div class="soci">
           <ul>
 
-            <li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
-            <li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
+            <li class="hvr-rectangle-out"><a class="fb" href="https://www.facebook.com/pourapkreyol/"></a></li>
           </ul>
         </div>
         <div class="clearfix"></div>
