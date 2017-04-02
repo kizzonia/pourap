@@ -1,5 +1,5 @@
 class BloggersController < ApplicationController
-  before_action :authenticate_blogger!, except: [:index, :show]
+  before_action :authenticate_blogger!
 
   layout "bloggers"
 

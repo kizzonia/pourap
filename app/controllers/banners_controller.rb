@@ -1,4 +1,5 @@
 class BannersController < ApplicationController
+  before_action :authenticate_blogger!, except:[:index]
   layout "bloggers", except:[:index, :show]
   before_action :set_banner, only: [:show, :edit, :update, :destroy]
 
