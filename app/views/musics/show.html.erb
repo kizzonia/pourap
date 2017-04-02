@@ -6,13 +6,11 @@
       <div class="agileinfo">
 
         <h2 class="w3"><%= @music.songname %></h2>
-        <div class="single">
+        <div class="b-bottom">
           <div class="col-md-12 col-sm-12" >
           <%= image_tag @music.albumimage.url, class: "img-responsive" %>
         </div>
         <div class="space"></div>
-      </div>
-      
           <div class="content-container col-md-12">
             <div id="jquery_jplayer_1" class="jp-jplayer"></div>
             <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -58,7 +56,7 @@
           <br>
           <div class="text-center col-md-12">
             <div class="col-md-6 col-md-offset-4">
-              <%= link_to  download_music_path, :method => :get, class: " btn btn-lg btn-warning" do %>
+              <%= button_to download_music_path, :method => :get, class: " btn btn-lg btn-warning" do %>
               <%= fa_icon "download 2x" %> Download Single
               <% end %>
 
@@ -77,8 +75,8 @@
             <h5 class="top">SubStory: <%= raw(@music.subtitle) %></h5>
             <br>
             <p class="sub"><%= raw(@music.description) %>.</p>
-          </div>
-          <div class="b-bottom">
+
+
             <p class"sub" >Discogrphy:<%= raw(@music.discography) %> </p>
             <p class="sub"> Published At<%= @music.published %> </p>
           </div>
