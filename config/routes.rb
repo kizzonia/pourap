@@ -43,8 +43,8 @@ Rails.application.routes.draw do
     end
     end
   root 'welcome#index'
-
-  get '/you',           :to => 'bloggers#index',    :as => :you
+  resource :bloggers
+  get '/you',           :to => 'bloggers#show',    :as => :you
   get '/you/update',    :to => 'bloggers#update',  :as => :you_update
 
   get '/soundcloud/connect',    :to => 'soundcloud#connect',    :as => :soundcloud_connect
