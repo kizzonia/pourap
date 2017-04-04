@@ -10,12 +10,12 @@
         <%= link_to "PouRap Admin", root_path, class: "navbar-brand"  %> |
 
 				  <%= link_to "Check out your profile infos", you_path, class: "navbar-brand" %>
-				
+
 
 
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
-						<% if logged_in? %>
+						<% if user_logged_in? %>
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user">
 							<use xlink:href="#stroked-male-user"></use></svg> <%= current_user.soundcloud_username %>  <span class="caret"></span></a>
 
