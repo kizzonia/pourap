@@ -33,10 +33,10 @@ h1,h2,h3,h4,h5,h6{
 p {
 	margin:0;
 	font-family: 'Ubuntu';
-	font-size: 16px;
+	font-size: 18px;
 	color: #8b8687;
 	font-weight:lighter;
-	line-height: 1.5em;
+	line-height: 1.8em;
 
 }
 ul{
@@ -341,7 +341,7 @@ height: 380px;
 .cover{
 	background-color: #000;
 	background-size: cover;
-	opacity: 0.8;
+	opacity: 0.5;
 	position: relative;
 	margin-top: -140px;
 	overflow:hidden;
@@ -2710,7 +2710,7 @@ label.on {
 }
 .cover{
 	min-height: 300px;
-	margin-top: -66px;
+	margin-top: -62px;
 }
 .cimg{
 	position: relative;
@@ -2758,7 +2758,7 @@ label.on {
 
 .cover{
 	min-height: 320px;
-	margin-top: -55px;
+	margin-top: -75px;
 }
 .cimg{
 	position: relative;
