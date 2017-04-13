@@ -37,6 +37,42 @@ input {
   width: 150px;
   height: 80px;
 }
+@media (max-width:500px) {
+  .wrapper{
+    height: 40px;
+    position: relative;
+    top: 80%;
+    margin-top: 50px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+  }
+  .search1{
+    height: 40px;
+    width: 140px
+  }
+  .submit1 {
+    height: 40px;
+    width: 120px
+  }
+}
+@media (max-width:450px) {
+  .wrapper{
+    height: 40px;
+    position: relative;
+    top: 80%;
+    margin-top: 50px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+  }
+  .search1{
+    height: 40px;
+    width: 120px
+  }
+  .submit1 {
+    height: 40px;
+    width: 100px
+  }
+}
 @media (max-width:414px) {
   .wrapper{
     height: 40px;
@@ -76,6 +112,7 @@ input {
     height: 40px;
     position: relative;
     top: 80%;
+    margin-top: 50px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%)
   }
