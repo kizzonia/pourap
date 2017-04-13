@@ -37,3 +37,14 @@ input {
   width: 150px;
   height: 80px;
 }
+@media (max-width:375px) {
+  .wrapper{
+    height: 40px;
+  }
+  .search1{
+    height: 40px;
+  }
+  .submit1 {
+    height: 80px;
+  }
+}

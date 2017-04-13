@@ -236,11 +236,11 @@ label.icon-search span {
 }
 .navbar-default .navbar-nav > li > a {
     color: #303030;
-		margin-left: 40px;
+		margin-left: 5px;
 }
 .navbar-nav > li > a {
     font-size: 14px;
-    padding: 10px 18px;
+    padding: 10px 25px;
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
