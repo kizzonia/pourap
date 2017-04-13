@@ -37,16 +37,71 @@ input {
   width: 150px;
   height: 80px;
 }
-@media (max-width:375px) {
+@media (max-width:414px) {
   .wrapper{
     height: 40px;
+    position: relative;
+    top: 80%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
   }
   .search1{
     height: 40px;
-    width: 60px
+    width: 80px
   }
   .submit1 {
     height: 40px;
-    width: 40px
+    width: 50px
+  }
+}
+@media (max-width:400px) {
+  .wrapper{
+    height: 40px;
+    position: relative;
+    top: 80%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+  }
+  .search1{
+    height: 40px;
+    width: 80px
+  }
+  .submit1 {
+    height: 40px;
+    width: 50px
+  }
+}
+@media (max-width:380px) {
+  .wrapper{
+    height: 40px;
+    position: relative;
+    top: 80%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+  }
+  .search1{
+    height: 40px;
+    width: 80px
+  }
+  .submit1 {
+    height: 40px;
+    width: 50px
+  }
+}
+@media (max-width:375px) {
+  .wrapper{
+    height: 40px;
+    position: relative;
+    top: 80%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+  }
+  .search1{
+    height: 40px;
+    width: 80px
+  }
+  .submit1 {
+    height: 40px;
+    width: 50px
   }
 }
