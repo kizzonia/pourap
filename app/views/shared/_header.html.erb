@@ -19,6 +19,9 @@
 							<li ><%= link_to "Home", root_path %></li>
 							<% if blogger_signed_in? %>
 							<li ><%= link_to "Admin", bloggers_path %></li>
+							<li ><%= link_to " Edit Music", musics_path %></li>
+							<li ><%= link_to " Edit Videos", videos_path %></li>
+							<li><%= link_to " Edit Projects", events_path %></li>
 							<%else %>
 							<li ><%= link_to "Music", musics_path %></li>
 							<li ><%= link_to "Videos", videos_path %></li>
