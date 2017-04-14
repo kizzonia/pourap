@@ -70,7 +70,7 @@ input {
   }
   .submit1 {
     height: 40px;
-    width: 150px
+    width: 120px
   }
 }
 @media (max-width:414px) {
@@ -106,7 +106,7 @@ input {
   }
   .submit1 {
     height: 40px;
-    width: 010px
+    width: 80px
   }
 }
 @media (max-width:380px) {
@@ -142,6 +142,6 @@ input {
   }
   .submit1 {
     height: 40px;
-    width: 80px
+    width: 50px
   }
 }
