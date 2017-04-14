@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :authenticate_blogger!, except: [:index, :show]
+  before_action :authenticate_blogger!, except: [:index, :show, :search]
   layout "bloggers", except:[:index, :show, :search]
  before_action :set_about, only: [:show, :destroy]
 
