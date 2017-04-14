@@ -42,17 +42,17 @@ input {
     height: 40px;
     position: relative;
     top: 80%;
-    margin-top: 50px;
+    margin-top: 160px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%)
   }
   .search1{
     height: 40px;
-    width: 140px
+    width: 200px
   }
   .submit1 {
     height: 40px;
-    width: 120px
+    width: 180px
   }
 }
 @media (max-width:450px) {
@@ -60,7 +60,43 @@ input {
     height: 40px;
     position: relative;
     top: 80%;
-    margin-top: 50px;
+    margin-top: 150px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+  }
+  .search1{
+    height: 40px;
+    width: 220px
+  }
+  .submit1 {
+    height: 40px;
+    width: 150px
+  }
+}
+@media (max-width:414px) {
+  .wrapper{
+    height: 40px;
+    position: relative;
+    top: 80%;
+    margin-top: 150px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+  }
+  .search1{
+    height: 40px;
+    width: 150px
+  }
+  .submit1 {
+    height: 40px;
+    width: 100px
+  }
+}
+@media (max-width:400px) {
+  .wrapper{
+    height: 40px;
+    position: relative;
+    top: 80%;
+    margin-top: 150px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%)
   }
@@ -70,41 +106,7 @@ input {
   }
   .submit1 {
     height: 40px;
-    width: 100px
-  }
-}
-@media (max-width:414px) {
-  .wrapper{
-    height: 40px;
-    position: relative;
-    top: 80%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%)
-  }
-  .search1{
-    height: 40px;
-    width: 80px
-  }
-  .submit1 {
-    height: 40px;
-    width: 50px
-  }
-}
-@media (max-width:400px) {
-  .wrapper{
-    height: 40px;
-    position: relative;
-    top: 80%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%)
-  }
-  .search1{
-    height: 40px;
-    width: 80px
-  }
-  .submit1 {
-    height: 40px;
-    width: 50px
+    width: 010px
   }
 }
 @media (max-width:380px) {
@@ -112,7 +114,7 @@ input {
     height: 40px;
     position: relative;
     top: 80%;
-    margin-top: 50px;
+  margin-top: 150px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%)
   }
@@ -130,15 +132,16 @@ input {
     height: 40px;
     position: relative;
     top: 80%;
+    margin-top: 150px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%)
   }
   .search1{
     height: 40px;
-    width: 80px
+    width: 150px
   }
   .submit1 {
     height: 40px;
-    width: 50px
+    width: 100px
   }
 }
