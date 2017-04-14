@@ -4,7 +4,9 @@
       <div class="wrapper top">
       <%= form_tag search_musics_path, method: :get, role: "search" do  %>
         <%=text_field_tag :search, params[:search], class: "search1", placeholder: "Search" %>
-        <%=submit_tag "", name:nil, label: false,  class: "submit1"  %>
+        <%=submit_tag "", name:nil, label: false,  class: "submit1" do %>
+        <%= fa_icon "search", class: "submit1" %>
+        <% end %>
         <% end %>
       </div>
       </div>
