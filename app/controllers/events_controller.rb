@@ -18,7 +18,9 @@ class EventsController < ApplicationController
     @events = Event.all.order('created_at DESC')
     @videos = Video.highest_voted.all.limit(10)
     @musics = Music.highest_voted.all.limit(10)
-      @abouts = About.all.limit(1)
+    @abouts = About.all.limit(1)
+    @facts = Fact.all.order("created_at DESC").limit(1)
+
   end
 
   def show
