@@ -8,6 +8,8 @@
         @musics = Music.highest_voted.limit(10)
         @videos = Video.highest_voted.limit(10)
         @facts = Fact.all.order('created_at DESC').limit(1)
+        @abouts = About.all.order("created_at DESC").limit(1)
+
         #@tracks = current_user.soundcloud_client.get("/me/tracks", :limit => 5)
         #@me     = current_user.soundcloud_client.get("/me")
 
@@ -20,7 +22,8 @@
       @musics = Music.highest_voted.limit(10)
       @videos = Video.highest_voted.limit(10)
       @facts = Fact.all.order('created_at DESC').limit(1)
-      @abouts = About.all.limit(1)
+      @abouts = About.all.order("created_at DESC").limit(1)
+
       #@tracks = current_user.soundcloud_client.get("/me/tracks", :limit => 5)
       #@me     = current_user.soundcloud_client.get("/me")
     end

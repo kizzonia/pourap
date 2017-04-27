@@ -9,6 +9,8 @@ class VideosController < ApplicationController
      @musics = Music.highest_voted.limit(10)
       @videos = Video.highest_voted.limit(10)
       @facts = Fact.all.order('created_at DESC').limit(1)
+      @abouts = About.all.order("created_at DESC").limit(1)
+
 
     @abouts = About.all.limit(1)
 
@@ -18,7 +20,7 @@ class VideosController < ApplicationController
  end
   def index
     @videos = Video.all.order('created_at DESC')
-    @abouts = About.all.limit(1)
+    @abouts = About.all.order("created_at DESC").limit(1)
     @videos = Video.highest_voted.all.limit(10)
     @musics = Music.highest_voted.all.limit(10)
     @facts = Fact.all.order('created_at DESC').limit(1)

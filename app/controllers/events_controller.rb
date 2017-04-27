@@ -7,7 +7,7 @@ class EventsController < ApplicationController
       @events = Event.search(params[:search])
       @musics = Music.highest_voted.limit(10)
        @videos = Video.highest_voted.limit(10)
-         @abouts = About.all.limit(1)
+         @abouts = About.all.order("created_at DESC").limit(1)
          @facts = Fact.all.order("created_at DESC").limit(1)
 
     else
