@@ -11,29 +11,14 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-  <%= f.input :name, class: "form-control", placeholder: "Enter Your Name" %>
-  </div>
 
   <div class="form-group">
-    <%= f.input :bio, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
+    <%= f.input :bio, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } }, label: "About Us " %>
 
   </div>
 
-  <div class="form-group">
-    <%= f.input :contact, class: "form-control", placeholder: "How can we contact you " %>
-  </div>
 
-  <div class="form-group">
-    <%= f.input :facebook, class: "form-control", placeholder: "Enter Your Facebook Link" %>
-  </div>
-  <div class="form-group">
-    <%= f.input :twitter, class: "form-control", placeholder: "Enter Your Twitter handle" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.input :email, class: "form-control", plaaceholder: "Enter Your Email Address"%>
-  </div>
   <div class="form-group">
       <%= f.input :thumbnail, as: :file, paceholder: "Add display picture" %>
     </div>
