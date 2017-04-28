@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+    before_action :authenticate_blogger!
   layout "bloggers", except:[:index, :show]
   before_action :set_about, only: [:show, :edit, :update, :destroy]
   def index
