@@ -5,14 +5,15 @@
     <div class="col-md-9 technology-left">
       <div class="agileinfo">
 
-        <h2 class="w3"><%= @video.title %></h2>
 
 
-          <div class="embed-container">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%=@video.uid %>" frameborder="0" allowfullscreen></iframe>
+
+          <div class="col-md-12 embed-container">
+                <iframe class="embed-responsive-item" style="width: 100vw;height: 100vh;position: relative;" src="https://www.youtube.com/embed/<%=@video.uid %>" frameborder="0" allowfullscreen></iframe>
             </div>
 <div class="single">
             <div class="b-bottom">
+              <h2 class="w3"><%= @video.title %></h2>
               <h5 class="top">SubStory: <%= raw(@video.description) %></h5>
               <br>
               <p class="sub"><%= raw(@video.story) %>.</p>
