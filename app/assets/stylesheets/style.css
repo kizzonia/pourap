@@ -229,6 +229,10 @@ label.icon-search span {
     margin-bottom: 0;
 
 }
+.navbar-brand a{
+	color:#fbd14b !important;
+	font-family: "Raleway";
+}
 .navbar-default {
     background: none;
     border: none;
