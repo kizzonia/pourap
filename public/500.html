@@ -1,66 +1,105 @@
-<!DOCTYPE html>
+<!DOCTYPE HTMl>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+<title>404</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+<link href='http://fonts.googleapis.com/css?family=Strait' rel='stylesheet' type='text/css'>
+<style>
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0;padding:0;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */:
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+.underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+body{
+	font-family: 'Strait', sans-serif;
+	 background: #340030;
 
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+}
+.wrap{
+	 height:750px;
+	 margin: 0 auto;
+	 position: relative;
+}
+h1{
+	color: #fff;
+	font-size: 30px;
+	padding: 30px;
+}
+.banner{
+	width: 343px;
+	margin: 100px auto 0 auto ;
+}
+.banner img{
 
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+}
+.search{
+	width:300px;
+	margin:50px auto 0 auto;
+	position: relative;
+}
+.search input[type="text"]{
+	font-family: 'Strait', sans-serif;
+	background: #491c47;
+	padding:6px 30px 6px 6px;
+	width: 250px;
+	border:none;
+	color: #986595;
+	font-size: 18px;
+	outline: none;
 
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
+}
+.search input[type="submit"]{
+	background: url("../assets/sub-bttn.png");
+	width: 32px;
+	height: 51px;
+	border: none;
+	position: absolute;
+	right:-8px;
+	top: -10px;
+	cursor: pointer;
+}
+.copy{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	 color: #744971;
+
+}
+.copy a{
+	 color: #fff;
+}
+
+</style>
 </head>
-
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
+
+			<div class="wrap">
+				<h1>Pourap Music</h1>
+				<div class="banner"><img src="../assets/fuel-404-logo.png" alt="" /></div>
+				<div class="search">
+				<a href="http://www.pourap.com">Go Back Home </a>
+				</div>
+			</div>
+
 </body>
 </html>
