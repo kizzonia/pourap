@@ -24,6 +24,7 @@
 //= require bloggers
 //= require lumino.glyphs
 //= require connect
+//= require sc
 $(function(){
   $(".connect-with-soundcloud a.connect").live("click", function(event){
     event.preventDefault();
